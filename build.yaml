@@ -17,3 +17,8 @@ include:
     shield: corne_left
   - board: nrf52840dk_nrf52840
     shield: corne_right
+  - board: nrf52840dk_nrf52840
+    shield: bgkeeb_left
+  - board: nrf52840dk_nrf52840
+    shield: bgkeeb_right
+
