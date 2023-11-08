@@ -17,37 +17,31 @@
         reset_right {
             bindings = <&bootloader>;
             key-positions = <35 9 8 7 6 34>;
-            layers = <0>;
         };
 
         right_usb {
             bindings = <&out OUT_USB>;
             key-positions = <34 35 16 17 18 19>;
-            layers = <0>;
         };
 
         right_ble {
             bindings = <&out OUT_BLE>;
             key-positions = <29 28 27 26 35 34>;
-            layers = <0>;
         };
 
         reset_left {
             bindings = <&bootloader>;
             key-positions = <0 1 2 3 32 33>;
-            layers = <0>;
         };
 
         left_usb {
             bindings = <&out OUT_USB>;
             key-positions = <32 33 13 12 11 10>;
-            layers = <0>;
         };
 
         left_ble {
             bindings = <&out OUT_BLE>;
             key-positions = <33 32 23 22 21 20>;
-            layers = <0>;
         };
     };
 };
