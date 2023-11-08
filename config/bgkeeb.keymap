@@ -1,10 +1,10 @@
 // used swweeep default keymap
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -122,10 +122,10 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &tog 6      &none        &kp HOME     &kp UP       &kp END      &kp PG_UP
-&kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &kp BSPC    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE    &trans      &none        &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE
-             &trans       &kp DEL      &kp SPACE    &trans      &lt 5 DEL    &lt 4 TAB    &trans       &trans
+&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &tog 6        &none        &kp HOME     &kp UP       &kp END      &kp PG_UP
+&kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &kp BSPC      &none        &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE    &caps_word    &none        &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE
+             &trans       &kp DEL      &kp SPACE    &trans        &lt 5 DEL    &lt 4 TAB    &trans       &trans
             >;
         };
 
