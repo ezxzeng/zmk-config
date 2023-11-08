@@ -38,17 +38,19 @@
     // #define ENCODERS_PAD_A {B5} {9} {A9}
     // #define ENCODERS_PAD_B {B4} {8} {A8}
 
-    // #define ENCODER_RESOLUTION 2
+    // #define ENCODER_RESOLUTION 2 ------- used default zmk values instead
     encoder: encoder {
         compatible = "alps,ec11";
         label = "encoder";
         a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <2>;
+        steps = <80>;
+        status = "okay";
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder>;
+        triggers-per-rotation = <20>;
     };
 };
