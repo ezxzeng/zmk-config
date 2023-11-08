@@ -82,10 +82,10 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp Q         &kp W         &kp E         &kp R            &kp T          &kp Y         &kp U                &kp I          &kp O              &kp P
-&hm LGUI A    &hm LALT S    &hm LALT D    &hs LSHIFT F     &kp G          &kp H         &hs RSHIFT J         &hm RCTRL K    &hm RALT L         &hm RGUI SEMI
-&kp Z         &kp X         &kp C         &kp V            &kp B          &kp N         &kp M                &kp COMMA      &kp DOT            &kp FSLH
-              &kp K_MUTE    &kp LCTRL     &mt LGUI ESC    &lt 3 ENTER    &lt 1 BSPC    &mt RSHIFT SPACE    &kp RSHIFT     &mt RCTRL BSPC
+&kp Q         &kp W         &kp E          &kp R           &kp T          &kp Y         &kp U               &kp I          &kp O             &kp P
+&hm LGUI A    &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G          &kp H         &hs RSHIFT J        &hm RCTRL K    &hm RALT L        &hm RGUI SEMI
+&kp Z         &kp X         &kp C          &kp V           &kp B          &kp N         &kp M               &kp COMMA      &kp DOT           &kp FSLH
+              &kp K_MUTE    &kp LCTRL      &mt LGUI ESC    &lt 3 ENTER    &lt 1 BSPC    &mt RSHIFT SPACE    &kp RSHIFT     &mt RCTRL BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -153,9 +153,9 @@
         left_num {
             label = "left_num";
             bindings = <
-&kp EQUAL         &kp N7         &kp N8          &kp N9            &tog 7         &trans    &trans    &trans    &trans    &trans
-&hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6      &kp DOT        &trans    &trans    &trans    &trans    &trans
-&kp N0            &kp N1         &kp N2          &kp N3            &kp COMMA      &trans    &trans    &trans    &trans    &trans
+&kp EQUAL         &kp N7         &kp N8          &kp N9           &tog 7         &trans    &trans    &trans    &trans    &trans
+&hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6     &kp DOT        &trans    &trans    &trans    &trans    &trans
+&kp N0            &kp N1         &kp N2          &kp N3           &kp COMMA      &trans    &trans    &trans    &trans    &trans
                   &trans         &trans          &mt LSHFT TAB    &lt 8 ENTER    &trans    &trans    &trans    &trans
             >;
         };
@@ -163,12 +163,11 @@
         left_sym {
             label = "left_sym";
             bindings = <
-&kp ESC      &kp COLON            &kp LPAR            &kp RPAR    &kp BSPC     &trans    &trans    &trans    &trans    &trans
-&kp GRAVE    &kp SQT              &kp LBKT            &kp RBKT    &kp UNDER    &trans    &trans    &trans    &trans    &trans
-&kp BSLH     &kp DOUBLE_QUOTES    &kp LT              &kp GT      &kp FSLH     &trans    &trans    &trans    &trans    &trans
+&kp ESC      &kp COLON            &kp LPAR           &kp RPAR    &kp BSPC     &trans    &trans    &trans    &trans    &trans
+&kp GRAVE    &kp SQT              &kp LBKT           &kp RBKT    &kp UNDER    &trans    &trans    &trans    &trans    &trans
+&kp BSLH     &kp DOUBLE_QUOTES    &kp LT             &kp GT      &kp FSLH     &trans    &trans    &trans    &trans    &trans
              &trans               &mt LSHFT SPACE    &trans      &trans       &trans    &trans    &trans    &trans
             >;
         };
     };
 };
-
