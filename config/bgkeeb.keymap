@@ -100,7 +100,7 @@
 &kp EXCL          &kp AT               &kp LPAR          &kp RPAR           &kp BACKSLASH    &kp EQUAL    &kp N7          &kp N8          &kp N9         &kp BSPC
 &hm LGUI GRAVE    &hm LALT APOS        &hm LCTRL LBKT    &hs LSHIFT RBKT    &kp UNDER        &kp MINUS    &hs RSHFT N4    &hm RCTRL N5    &hm RALT N6    &hm RGUI SEMI
 &kp PIPE          &kp DOUBLE_QUOTES    &kp LT            &kp GT             &kp SLASH        &kp N0       &kp N1          &kp N2          &kp N3         &tog 2
-                  &trans               &trans            &trans             &lt 5 ENTER      &trans       &trans          &trans          &trans
+                  &trans               &trans            &trans             &lt 5 ENTER      &trans       &lt 6 SPACE     &trans          &trans
             >;
         };
 
@@ -116,10 +116,10 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &tog 6      &none        &kp HOME     &kp UP       &kp END      &kp PG_UP
-&kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &kp BSPC    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE    &kp CAPS    &none        &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE
-             &trans       &kp DEL      &kp SPACE    &trans      &lt 5 DEL    &lt 4 TAB    &trans       &trans
+&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT      &tog 7      &none        &kp HOME     &kp UP       &kp END      &kp PG_UP
+&kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT      &kp BSPC    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN
+&kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE      &kp CAPS    &none        &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE
+             &trans       &kp DEL      &lt 5 SPACE    &trans      &lt 5 DEL    &lt 4 TAB    &trans       &trans
             >;
         };
 
@@ -137,19 +137,30 @@
             label = "Function";
             bindings = <
 &bootloader        &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC    &bt BT_SEL 0    &bt BT_SEL 1    &kp F12    &kp F7    &kp F8    &kp F9    &trans
-&none              &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11    &kp F4    &kp F5    &kp F6    &trans
+&out OUT_USB       &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11    &kp F4    &kp F5    &kp F6    &trans
 &kp PRINTSCREEN    &mt C_MUTE K_MUTE    &out OUT_BLE            &bt BT_SEL 4    &bt BT_CLR      &kp F10    &kp F1    &kp F2    &kp F3    &trans
-                   &trans               &trans                  &out OUT_USB    &trans          &trans     &trans    &trans    &trans
+                   &trans               &trans                  &trans          &trans          &trans     &trans    &trans    &trans
             >;
+        };
+
+        flipped_func {
+            bindings = <
+&trans    &kp F7    &kp F8    &kp F9    &kp F12    &bt BT_SEL 1    &bt BT_SEL 0    &kp C_BRI_UP     &kp C_VOLUME_UP      &bootloader
+&trans    &kp F4    &kp F5    &kp F6    &kp F11    &bt BT_SEL 3    &bt BT_SEL 2    &kp C_BRI_DEC    &kp C_VOLUME_DOWN    &out OUT_USB
+&trans    &kp F1    &kp F2    &kp F3    &kp F10    &bt BT_CLR      &bt BT_SEL 4    &out OUT_BLE     &mt C_MUTE K_MUTE    &kp PSCRN
+          &trans    &trans    &trans    &trans     &trans          &trans          &trans           &trans
+            >;
+
+            label = "Function";
         };
 
         left_num {
             label = "left_num";
             bindings = <
-&kp EQUAL         &kp N7         &kp N8          &kp N9            &tog 6         &trans    &trans    &trans    &trans    &trans
+&kp EQUAL         &kp N7         &kp N8          &kp N9            &tog 7         &trans    &trans    &trans    &trans    &trans
 &hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6      &kp DOT        &trans    &trans    &trans    &trans    &trans
 &kp N0            &kp N1         &kp N2          &kp N3            &kp COMMA      &trans    &trans    &trans    &trans    &trans
-                  &trans         &trans          &pht LSHFT TAB    &lt 7 ENTER    &trans    &trans    &trans    &trans
+                  &trans         &trans          &pht LSHFT TAB    &lt 8 ENTER    &trans    &trans    &trans    &trans
             >;
         };
 
