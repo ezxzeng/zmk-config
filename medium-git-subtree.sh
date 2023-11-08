@@ -24,6 +24,9 @@ git checkout -b ${SOURCE_BRANCH} ${shield_name}/${remote_branch}
 # echo Hi. >> config/boards/shields/${shield_name}/test.txt
 # git add config/boards/shields/${shield_name}/test.txt
 # git commit -am "test"
+# echo Hi. >> test.txt
+# git add test.txt
+# git commit -am "test_root"
 
 # create new staging branch from all the commits impacting "/my-chart" from source repo
 git subtree split -P config/boards/shields/${shield_name} -b ${STAGING_BRANCH} --onto main
