@@ -15,7 +15,7 @@
         compatible = "zmk,combos";
 
         reset_right {
-            bindings = <&sys_reset>;
+            bindings = <&bootloader>;
             key-positions = <35 9 8 7 6 34>;
             layers = <0>;
         };
@@ -33,7 +33,7 @@
         };
 
         reset_left {
-            bindings = <&sys_reset>;
+            bindings = <&bootloader>;
             key-positions = <0 1 2 3 32 33>;
             layers = <0>;
         };
@@ -142,8 +142,8 @@
         func_layer {
             label = "Function";
             bindings = <
-&sys_reset         &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC    &bt BT_SEL 0    &bt BT_SEL 1    &kp F12    &kp F7    &kp F8    &kp F9    &trans
-&bootloader        &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11    &kp F4    &kp F5    &kp F6    &trans
+&bootloader        &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC    &bt BT_SEL 0    &bt BT_SEL 1    &kp F12    &kp F7    &kp F8    &kp F9    &trans
+&none              &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11    &kp F4    &kp F5    &kp F6    &trans
 &kp PRINTSCREEN    &mt C_MUTE K_MUTE    &out OUT_BLE            &bt BT_SEL 4    &bt BT_CLR      &kp F10    &kp F1    &kp F2    &kp F3    &trans
                    &trans               &trans                  &out OUT_USB    &trans          &trans     &trans    &trans    &trans
             >;
