@@ -40,16 +40,16 @@
 
             quick-tap-ms = <0>;
         };
-        rst: rst {
+        rst: reset_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "reset hold tap";
+            label = "reset_hold_tap";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <1000>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             quick-tap-ms = <200>;
-            retro-tap;
+
         };
     };
 
