@@ -15,54 +15,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        reset_right {
-            bindings = <&bootloader>;
-            key-positions = <35 9 8 7 6 34>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        right_usb {
-            bindings = <&out OUT_USB>;
-            key-positions = <34 35 16 17 18 19>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        right_ble {
-            bindings = <&out OUT_BLE>;
-            key-positions = <29 28 27 26 35 34>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        reset_left {
-            bindings = <&bootloader>;
-            key-positions = <0 1 2 3 32 33>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        left_usb {
-            bindings = <&out OUT_USB>;
-            key-positions = <32 33 13 12 11 10>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        left_ble {
-            bindings = <&out OUT_BLE>;
-            key-positions = <33 32 23 22 21 20>;
-            slow-release;
-            timeout-ms = <500>;
-            require-prior-idle-ms = <1000>;
-        };
     };
 };
 
@@ -86,6 +38,19 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        rst: rst {
+            compatible = "zmk,behavior-hold-tap";
+            label = "reset hold tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1000>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <9 0 4 5 3 2 6 7 14 15>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <1000>;
+            retro-tap;
+        };
     };
 
     keymap {
@@ -93,7 +58,7 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W         &kp E          &kp R           &kp T          &kp Y         &kp U           &kp I          &kp O             &kp P
+&rst 7 Q      &kp W         &kp E          &kp R           &kp T          &kp Y         &kp U           &kp I          &kp O             &rst 7 P
 &hm LGUI A    &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G          &kp H         &hs RSHIFT J    &hm RCTRL K    &hm RALT L        &hm RGUI SEMI
 &kp Z         &kp X         &kp C          &kp V           &kp B          &kp N         &kp M           &kp COMMA      &kp DOT           &kp FSLH
               &kp K_MUTE    &kp LCTRL      &mt LGUI ESC    &lt 3 ENTER    &lt 1 BSPC    &kp SPACE       &kp RSHIFT     &mt RCTRL BSPC
@@ -153,6 +118,15 @@
 &kp GRAVE    &kp SQT              &kp LBKT           &kp RBKT    &kp UNDER    &trans    &trans    &trans    &trans    &trans
 &kp BSLH     &kp DOUBLE_QUOTES    &kp LT             &kp GT      &kp FSLH     &trans    &trans    &trans    &trans    &trans
              &trans               &mt LSHFT SPACE    &trans      &trans       &trans    &trans    &trans    &trans
+            >;
+        };
+
+        reset {
+            bindings = <
+&trans    &trans    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader    &out OUT_BLE    &out OUT_USB    &trans    &trans
+&trans    &trans    &trans          &trans          &sys_reset     &sys_reset     &trans          &trans          &trans    &trans
+&trans    &trans    &trans          &trans          &trans         &trans         &trans          &trans          &trans    &trans
+          &trans    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader    &out OUT_BLE    &out OUT_USB    &trans
             >;
         };
     };
