@@ -1,0 +1,365 @@
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHIFT}
+  - G
+  - H
+  - {t: J, h: RSHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - MUTE
+  - LCTRL
+  - {t: ESC, h: LGUI}
+  - {t: ENTER, h: nav}
+  - {t: BSPC, h: sym}
+  - {t: SPACE, h: RSHIFT}
+  - RSHIFT
+  - {t: BSPC, h: RCTRL}
+  sym:
+  - '!'
+  - '@'
+  - (
+  - )
+  - \
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - BSPC
+  - {t: '`', h: LGUI}
+  - {t: ., h: LALT}
+  - {t: '[', h: LCTRL}
+  - {t: ']', h: LSHIFT}
+  - _
+  - '-'
+  - {t: '4', h: RSHFT}
+  - {t: '5', h: RCTRL}
+  - {t: '6', h: RALT}
+  - {t: ;, h: RGUI}
+  - '|'
+  - '"'
+  - <
+  - '>'
+  - /
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - rnav
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ENTER, h: func}
+  - {type: held}
+  - {t: SPACE, h: flipped_func}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  rnav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - AC SCROLL UP
+  - HOME
+  - UP
+  - END
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - AC SCROLL DOWN
+  - LEFT
+  - DOWN
+  - RIGHT
+  - RET
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - ''
+  - ''
+  - ''
+  - rnav
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - mouse
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - left_num
+  - ''
+  - HOME
+  - UP
+  - END
+  - PG UP
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - BSPC
+  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PG DN
+  - SPACE
+  - SPACE
+  - SPACE
+  - SPACE
+  - CAPS
+  - ''
+  - SPACE
+  - SPACE
+  - SPACE
+  - SPACE
+  - {t: ▽, type: trans}
+  - DEL
+  - {t: SPACE, h: func}
+  - {type: held}
+  - {t: DEL, h: func}
+  - {t: TAB, h: mouse}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mouse:
+  - ''
+  - ESC
+  - ESC
+  - ESC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESC
+  - ESC
+  - ESC
+  - {t: ▽, type: trans}
+  - ESC
+  - ESC
+  - ESC
+  - ESC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ESC
+  - ESC
+  - ESC
+  - ESC
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RGUI
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  func:
+  - '&bootloader'
+  - VOLUME UP
+  - BRIGHTNESS INC
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - F12
+  - F7
+  - F8
+  - F9
+  - {t: ▽, type: trans}
+  - OUT USB
+  - VOLUME DOWN
+  - BRIGHTNESS DEC
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - F11
+  - F4
+  - F5
+  - F6
+  - {t: ▽, type: trans}
+  - PRINTSCREEN
+  - {t: MUTE, h: MUTE}
+  - OUT BLE
+  - {t: BT, h: '4'}
+  - BT CLR
+  - F10
+  - F1
+  - F2
+  - F3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  flipped_func:
+  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - BRI UP
+  - VOLUME UP
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - F4
+  - F5
+  - F6
+  - F11
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - BRI DEC
+  - VOLUME DOWN
+  - OUT USB
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F10
+  - BT CLR
+  - {t: BT, h: '4'}
+  - OUT BLE
+  - {t: MUTE, h: MUTE}
+  - PSCRN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  left_num:
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - left_num
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '-', h: LGUI}
+  - {t: '4', h: LALT}
+  - {t: '5', h: LCTRL}
+  - {t: '6', h: LSHFT}
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - ','
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, h: LSHFT}
+  - {t: ENTER, h: left_sym}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  left_sym:
+  - ESC
+  - ':'
+  - (
+  - )
+  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '`'
+  - ''''
+  - '['
+  - ']'
+  - _
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - \
+  - '"'
+  - <
+  - '>'
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: SPACE, h: LSHFT}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [35, 9, 8, 7, 6, 34]
+  k: '&bootloader'
+- p: [34, 35, 16, 17, 18, 19]
+  k: OUT USB
+- p: [29, 28, 27, 26, 35, 34]
+  k: OUT BLE
+- p: [0, 1, 2, 3, 32, 33]
+  k: '&bootloader'
+- p: [32, 33, 13, 12, 11, 10]
+  k: OUT USB
+- p: [33, 32, 23, 22, 21, 20]
+  k: OUT BLE
