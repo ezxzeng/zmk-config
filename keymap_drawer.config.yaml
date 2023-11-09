@@ -1,4 +1,5 @@
 draw_config:
+
   # since I have reset combos that use too many keys
   separate_combo_diagrams: true
 
