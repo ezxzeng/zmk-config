@@ -1,6 +1,6 @@
 layers:
   default:
-  - Q
+  - {t: Q, h: reset}
   - W
   - E
   - R
@@ -9,7 +9,7 @@ layers:
   - U
   - I
   - O
-  - P
+  - {t: P, h: reset}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -272,16 +272,42 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [35, 9, 8, 7, 6, 34]
-  k: $$mdi:progress-download$$
-- p: [34, 35, 16, 17, 18, 19]
-  k: OUT USB
-- p: [29, 28, 27, 26, 35, 34]
-  k: OUT BLE
-- p: [0, 1, 2, 3, 32, 33]
-  k: $$mdi:progress-download$$
-- p: [32, 33, 13, 12, 11, 10]
-  k: OUT USB
-- p: [33, 32, 23, 22, 21, 20]
-  k: OUT BLE
+  reset:
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - OUT USB
+  - OUT BLE
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
+  - OUT BLE
+  - OUT USB
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - OUT USB
+  - OUT BLE
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
+  - OUT BLE
+  - OUT USB
+  - {t: '$$mdi:transfer$$', type: trans}
