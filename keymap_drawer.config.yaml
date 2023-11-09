@@ -1,10 +1,14 @@
 draw_config:
-
-  # since I have reset combos that use too many keys
   separate_combo_diagrams: true
 
 parse_config:
+  mark_alternate_layer_activators: true
+  sticky_label: $$mdi:gesture-tap-hold$$
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
 
+  raw_binding_map:
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
