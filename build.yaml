@@ -17,11 +17,5 @@ include:
   #   shield: corne_left
   # - board: nice_nano_v2
   #   shield: corne_right
-  - board: nice_nano_v2
-    shield: bgkeeb_left
-  - board: nice_nano_v2
-    shield: bgkeeb_right
-  - board: nice_nano_v2
-    shield: cradio_left
-  - board: nice_nano_v2
-    shield: cradio_right
+  board: ["nice_nano_v2"]
+  shield: ["bgkeeb_left", "bgkeeb_right", "swweep_left", "swweeep_right"]
