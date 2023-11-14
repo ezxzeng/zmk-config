@@ -3,6 +3,7 @@ on:
     paths:
       - 'config/*.keymap'
       - 'config/*.dtsi'
+      - 'config/*.conf'
       - '.github/workflows/build.yml'
       - 'build.yaml'
   pull_request:

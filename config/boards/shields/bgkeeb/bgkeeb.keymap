@@ -1,4 +1,4 @@
-// used swweeep default keymap
+// used sweep_sq default keymap
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
