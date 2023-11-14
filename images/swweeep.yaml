@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: obosob/arch_36}
 layers:
   default:
-  - '&rst 7 Q'
+  - {t: Q, h: reset}
   - W
   - E
   - R
@@ -10,7 +10,7 @@ layers:
   - U
   - I
   - O
-  - '&rst 7 P'
+  - {t: P, h: reset}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -34,7 +34,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: LGUI}
   - {t: '$$mdi:keyboard-return$$', h: nav}
-  - '&bsp_l 1 BSPC'
+  - {t: '$$mdi:backspace$$', h: sym}
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
   sym:
@@ -71,7 +71,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', h: func}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:transfer$$', type: trans}
   rnav:
@@ -260,7 +260,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   reset:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
   - OUT BLE
@@ -269,7 +269,7 @@ layers:
   - OUT BLE
   - OUT USB
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -296,10 +296,3 @@ layers:
   - $$mdi:progress-download$$
   - OUT BLE
   - OUT USB
-combos:
-- p: [20, 21]
-  k: LC(Z)
-- p: [21, 22]
-  k: Q
-- p: [27, 28]
-  k: ;
