@@ -4,6 +4,7 @@ on:
       - 'config/*.keymap'
       - 'config/*.dtsi'
       - '.github/workflows/build.yml'
+      - 'build.yaml'
   pull_request:
   workflow_dispatch:
 
