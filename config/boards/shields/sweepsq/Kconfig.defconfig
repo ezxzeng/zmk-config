@@ -1,17 +1,17 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SWEEP_SQ_LEFT
+if SHIELD_sweepsq_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "sweep_sq"
+    default "sweepsq"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_SWEEP_SQ_LEFT || SHIELD_SWEEP_SQ_RIGHT
+if SHIELD_sweepsq_LEFT || SHIELD_sweepsq_RIGHT
 config ZMK_SPLIT
     default y
 endif

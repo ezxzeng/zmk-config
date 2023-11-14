@@ -4,8 +4,8 @@
 # shield_name="bgkeeb"
 # remote_repo="ezxzeng/zmk-bgkeeb"
 # remote_branch="main"
-shield_name="sweep_sq"
-remote_repo="sadekbaroudi/zmk-sweep_sq"
+shield_name="sweepsq"
+remote_repo="sadekbaroudi/zmk-sweepsq"
 remote_branch="master"
 
 git remote -v | grep -w ${shield_name} || git remote add ${shield_name} git@github.com:${remote_repo}.git

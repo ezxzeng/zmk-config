@@ -1,11 +1,11 @@
 file_format: "1"
-id: sweep_sq
-name: sweep_sq
+id: sweepsq
+name: sweepsq
 type: shield
 url: https://github.com/sadekbaroudi/sweep36
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - sweep_sq_left
-  - sweep_sq_right
+  - sweepsq_left
+  - sweepsq_right
