@@ -1,4 +1,3 @@
-layout: {qmk_keyboard: ferris/sweep}
 layers:
   default:
   - {t: Q, h: reset}
@@ -31,10 +30,12 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: LGUI}
   - {t: '$$mdi:keyboard-return$$', h: nav}
   - {t: '$$mdi:backspace$$', h: sym}
   - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-shift$$
   sym:
   - '!'
   - '@'
@@ -68,9 +69,10 @@ layers:
   - rnav
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', h: func, type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', h: func}
+  - {type: held}
   - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
   rnav:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -106,6 +108,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   nav:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -137,10 +141,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-space$$
   - {type: held}
   - {t: '$$mdi:backspace-reverse-outline$$', h: func}
   - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
   func:
   - $$mdi:progress-download$$
   - VOLUME UP
@@ -173,8 +179,10 @@ layers:
   - F3
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   left_num:
   - {t: '=', s: +}
@@ -207,8 +215,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: left_sym}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   left_sym:
@@ -242,8 +252,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   reset:
@@ -277,7 +289,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - OUT USB
   - OUT BLE
   - $$mdi:progress-download$$
   - $$mdi:progress-download$$
   - OUT BLE
+  - OUT USB
