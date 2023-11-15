@@ -85,7 +85,7 @@
 &kp EXCL          &kp AT               &kp LPAR          &kp RPAR           &kp BACKSLASH    &kp EQUAL  &kp N7        &kp N8        &kp N9       &kp BSPC
 &hm LGUI GRAVE    &hm LALT APOS        &hm LCTRL LBKT    &hs LSHIFT RBKT    &kp UNDER        &kp MINUS  &hs RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SEMI
 &kp PIPE          &kp DOUBLE_QUOTES    &kp LT            &kp GT             &kp SLASH        &kp N0     &kp N1        &kp N2        &kp N3       &tog 2
-                                       &trans            &trans             &lt 4 ENTER      &trans     &kp SPACE 
+                                       &trans            &trans             &lt 4 ENTER      &trans
             >;
         };
 
