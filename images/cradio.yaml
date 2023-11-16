@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - {t: P, h: reset}
-  - {t: A, h: LGUI}
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -20,7 +20,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RGUI, s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$', s: ':'}
   - Z
   - X
   - C
@@ -31,7 +31,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-esc$$', h: LGUI}
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', h: nav}
   - {t: '$$mdi:backspace$$', h: sym}
   - $$mdi:keyboard-space$$
@@ -46,7 +46,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '`', h: LGUI, s: '~'}
+  - {t: '`', h: '$$mdi:apple-keyboard-command$$', s: '~'}
   - {t: ., h: '$$mdi:apple-keyboard-option$$'}
   - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
   - {t: ']', h: '$$mdi:apple-keyboard-shift$$', s: '}'}
@@ -55,7 +55,7 @@ layers:
   - {t: '4', h: '$$mdi:apple-keyboard-shift$$', s: $}
   - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
   - {t: '6', h: '$$mdi:apple-keyboard-option$$', s: ^}
-  - {t: ;, h: RGUI, s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$', s: ':'}
   - '|'
   - '"'
   - <
@@ -116,7 +116,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - END
   - PG UP
-  - LGUI
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
@@ -186,7 +186,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '-', h: LGUI, s: _}
+  - {t: '-', h: '$$mdi:apple-keyboard-command$$', s: _}
   - {t: '4', h: '$$mdi:apple-keyboard-option$$', s: $}
   - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
   - {t: '6', h: '$$mdi:apple-keyboard-shift$$', s: ^}

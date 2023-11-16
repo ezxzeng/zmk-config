@@ -37,7 +37,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - LGUI
+  - $$mdi:apple-keyboard-command$$
   - lower
   - $$mdi:keyboard-space$$
   - RET
@@ -80,7 +80,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - LGUI
+  - $$mdi:apple-keyboard-command$$
   - {type: held}
   - $$mdi:keyboard-space$$
   - RET
@@ -123,7 +123,7 @@ layers:
   - '}'
   - '|'
   - '~'
-  - LGUI
+  - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - RET
