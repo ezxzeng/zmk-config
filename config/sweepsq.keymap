@@ -115,7 +115,7 @@
         nav_layer {
             label="nav_layer";
             bindings = <
-&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT         &tog LNUM      &none           &kp HOME        &kp UP       &kp END      &kp PG_UP
+&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT         &tog LNUM      &none           &kp HOME         &kp UP       &kp END      &kp PG_UP
 &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT         &kp BSPC       &none           &kp LEFT         &kp DOWN     &kp RIGHT    &kp PG_DN
 &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE         &kp CAPS       &none           &kp SPACE        &kp SPACE    &kp SPACE    &kp SPACE
                           &kp DEL      &lt FUNC SPACE    &trans         &lt FUNC DEL    &lt MOUSE TAB    &trans

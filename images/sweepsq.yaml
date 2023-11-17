@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mwh SCROLL_UP'
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -89,7 +89,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mwh SCROLL_DOWN'
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -100,9 +100,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:keyboard-tab$$
-  - '&mwh SCROLL_LEFT'
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mwh SCROLL_RIGHT'
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - rnav
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -149,25 +149,25 @@ layers:
   - {t: ▽, type: trans}
   mouse:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp LCLK'
-  - '&mwh SCROLL_UP'
-  - '&mkp RCLK'
+  - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
+  - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
+  - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:arrow-up-bold$$', s: '$$mdi:mouse$$'}
+  - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   - {t: ▽, type: trans}
-  - '&mkp MCLK'
-  - '&mwh SCROLL_LEFT'
-  - '&mwh SCROLL_DOWN'
-  - '&mwh SCROLL_RIGHT'
+  - {t: '3', h: Middle click, s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - '&mkp MCLK'
+  - {t: '$$mdi:arrow-left-bold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:arrow-down-bold$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:arrow-right-bold$$', s: '$$mdi:mouse$$'}
+  - {t: '3', h: Middle click, s: '$$mdi:mouse$$'}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$

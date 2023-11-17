@@ -6,6 +6,66 @@ parse_config:
   sticky_label: $$mdi:gesture-tap-hold$$
 
   raw_binding_map:
+
+    # Mouse
+    "&mwh SCROLL_UP":
+      shifted: scroll
+      tap: $$mdi:arrow-up-bold$$
+    "&mwh SCROLL_DOWN":
+      shifted: scroll
+      tap: $$mdi:arrow-down-bold$$
+    "&mwh SCROLL_LEFT":
+      shifted: scroll
+      tap: $$mdi:arrow-left-bold$$
+    "&mwh SCROLL_RIGHT":
+      shifted: scroll
+      tap: $$mdi:arrow-right-bold$$
+    "&mmv MOVE_UP":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-up-bold$$
+    "&mmv MOVE_DOWN":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-down-bold$$
+    "&mmv MOVE_LEFT":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-left-bold$$
+    "&mmv MOVE_RIGHT":
+      shifted: $$mdi:mouse$$
+      tap: $$mdi:arrow-right-bold$$
+
+    "&mkp MB1":
+      shifted: $$mdi:mouse$$
+      tap: "1"
+      hold: "Left click"
+    "&mkp MB2":
+      shifted: $$mdi:mouse$$
+      tap: "2"
+      hold: "Right click"
+    "&mkp MB3":
+      shifted: $$mdi:mouse$$
+      tap: "3"
+      hold: "Middle click"
+    "&mkp LCLK":
+      shifted: $$mdi:mouse$$
+      tap: "1"
+      hold: "Left click"
+    "&mkp RCLK":
+      shifted: $$mdi:mouse$$
+      tap: "2"
+      hold: "Right click"
+    "&mkp MCLK":
+      shifted: $$mdi:mouse$$
+      tap: "3"
+      hold: "Middle click"
+    "&mkp MB4":
+      shifted: $$mdi:mouse$$
+      tap: "4"
+      hold: ""
+    "&mkp MB5":
+      shifted: $$mdi:mouse$$
+      tap: "5"
+      hold: ""
+
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
