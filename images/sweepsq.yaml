@@ -1,6 +1,6 @@
 layers:
   default:
-  - {t: Q, h: left_sym}
+  - {t: Q, h: reset}
   - W
   - E
   - R
@@ -9,7 +9,7 @@ layers:
   - U
   - I
   - O
-  - {t: P, h: left_sym}
+  - {t: P, h: reset}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -69,7 +69,7 @@ layers:
   - rnav
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', h: mouse}
+  - {t: '$$mdi:keyboard-return$$', h: func}
   - {type: held}
   - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
@@ -115,7 +115,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - left_sym
+  - left_num
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -226,7 +226,7 @@ layers:
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - func
+  - left_num
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -254,12 +254,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-return$$', h: left_num}
+  - {t: '$$mdi:keyboard-return$$', h: left_sym}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   left_sym:
-  - {t: '$$mdi:keyboard-esc$$', type: held}
+  - $$mdi:keyboard-esc$$
   - ':'
   - (
   - )
@@ -268,7 +268,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
   - {t: '[', s: '{'}
@@ -291,12 +291,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   reset:
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - OUT USB
   - OUT BLE
@@ -305,7 +305,7 @@ layers:
   - OUT BLE
   - OUT USB
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
