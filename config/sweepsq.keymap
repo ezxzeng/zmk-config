@@ -95,7 +95,7 @@
 &trans    &trans    &trans    &trans    &trans    &mwh SCROLL_UP      &kp HOME            &kp UP      &kp END              &none
 &trans    &trans    &trans    &trans    &trans    &mwh SCROLL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp RET
 &trans    &trans    &trans    &trans    &trans    &kp TAB             &mwh SCROLL_LEFT    &none       &mwh SCROLL_RIGHT    &tog 2
-          &trans    &trans    &trans    &trans    &mo 4               &trans              &trans      &trans
+                    &trans    &trans    &trans    &mo 4               &trans              &trans
             >;
         };
 
@@ -104,7 +104,7 @@
 &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT      &tog 7      &none        &kp HOME     &kp UP       &kp END      &kp PG_UP
 &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT      &kp BSPC    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN
 &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE      &kp CAPS    &none        &kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE
-             &trans       &kp DEL      &lt 5 SPACE    &trans      &lt 5 DEL    &lt 4 TAB    &trans       &trans
+                          &kp DEL      &lt 5 SPACE    &trans      &lt 5 DEL    &lt 4 TAB    &trans
             >;
         };
 
@@ -113,7 +113,7 @@
 &none        &mkp LCLK            &mwh SCROLL_UP     &mkp RCLK           &trans    &trans    &mkp LCLK          &mmv MOVE_UP      &mkp RCLK           &trans
 &mkp MCLK    &mwh SCROLL_LEFT    &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT    &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
 &kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans    &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
-             &trans              &trans              &trans               &trans    &trans    &trans            &trans            &trans
+                                 &trans              &trans               &trans    &trans    &trans            &trans
             >;
         };
 
