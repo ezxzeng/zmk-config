@@ -1,8 +1,8 @@
 draw_config:
-  separate_combo_diagrams: true
+  separate_combo_diagrams: false
 
 parse_config:
-  mark_alternate_layer_activators: true
+  mark_alternate_layer_activators: false
   sticky_label: $$mdi:gesture-tap-hold$$
 
   raw_binding_map:

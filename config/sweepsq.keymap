@@ -105,8 +105,8 @@
         rnav_layer {
             label="rnav_layer";
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_UP      &kp HOME            &kp UP      &kp END              &none
-&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp RET
+&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_UP      &kp HOME            &kp UP      &kp END              &kp ESC
+&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp ENTER
 &trans    &trans    &trans    &trans    &trans    &kp TAB             &mwh SCROLL_LEFT    &none       &mwh SCROLL_RIGHT    &tog 2
                     &trans    &trans    &trans    &mo MOUSE           &trans              &trans
             >;
@@ -115,10 +115,10 @@
         nav_layer {
             label="nav_layer";
             bindings = <
-&kp LEFT     &kp DOWN     &kp UP       &kp RIGHT         &tog LNUM      &none           &kp HOME         &kp UP       &kp END      &kp PG_UP
-&kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT         &kp BSPC       &none           &kp LEFT         &kp DOWN     &kp RIGHT    &kp PG_DN
-&kp SPACE    &kp SPACE    &kp SPACE    &kp SPACE         &kp CAPS       &none           &kp SPACE        &kp SPACE    &kp SPACE    &kp SPACE
-                          &kp DEL      &lt FUNC SPACE    &trans         &lt FUNC DEL    &lt MOUSE TAB    &trans
+&kp LEFT            &kp DOWN           &kp UP            &kp RIGHT           &tog LNUM      &mwh SCROLL_UP      &kp HOME            &kp UP      &kp END              &kp PG_UP
+&kp LGUI            &kp LALT           &kp LCTRL         &kp LSHFT           &kp BSPC       &mwh SCROLL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp PG_DN
+&mwh SCROLL_LEFT    &mwh SCROLL_DOWN   &mwh SCROLL_UP    &mwh SCROLL_RIGHT   &kp CAPS       &none               &mwh SCROLL_LEFT    &none       &mwh SCROLL_RIGHT    &kp SPACE
+                                       &kp DEL           &lt FUNC SPACE      &trans         &lt FUNC DEL        &lt MOUSE TAB       &trans
             >;
         };
 
