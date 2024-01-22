@@ -15,7 +15,7 @@
 board: ["nice_nano_v2"]
 shield: [
   "settings_reset",
-  "bgkeeb_left", "bgkeeb_right",
+  # "bgkeeb_left", "bgkeeb_right",
   "sweepsq_left", "sweepsq_right",
-  "cradio_left", "cradio_right",
+  # "cradio_left", "cradio_right",
 ]
