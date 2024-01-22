@@ -8,16 +8,16 @@ parse_config:
   raw_binding_map:
 
     # Mouse
-    "&mwh SCROLL_UP":
+    "&msc SCRL_UP":
       shifted: scroll
       tap: $$mdi:arrow-up-bold$$
-    "&mwh SCROLL_DOWN":
+    "&msc SCRL_DOWN":
       shifted: scroll
       tap: $$mdi:arrow-down-bold$$
-    "&mwh SCROLL_LEFT":
+    "&msc SCRL_LEFT":
       shifted: scroll
       tap: $$mdi:arrow-left-bold$$
-    "&mwh SCROLL_RIGHT":
+    "&msc SCRL_RIGHT":
       shifted: scroll
       tap: $$mdi:arrow-right-bold$$
     "&mmv MOVE_UP":

@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&msc SCRL_UP'
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -89,7 +89,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&msc SCRL_DOWN'
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -100,9 +100,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:keyboard-tab$$
-  - '&msc SCRL_LEFT'
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&msc SCRL_RIGHT'
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - rnav
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -116,7 +116,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - left_num
-  - '&msc SCRL_UP'
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -126,20 +126,20 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&msc SCRL_DOWN'
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - PG DN
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&msc SCRL_LEFT'
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&msc SCRL_RIGHT'
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - $$mdi:keyboard-space$$
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-space$$', h: func}
@@ -150,7 +150,7 @@ layers:
   mouse:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
-  - '&msc SCRL_UP'
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
   - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -159,9 +159,9 @@ layers:
   - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   - {t: ▽, type: trans}
   - {t: '3', h: Middle click, s: '$$mdi:mouse$$'}
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_RIGHT'
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:arrow-left-bold$$', s: '$$mdi:mouse$$'}
