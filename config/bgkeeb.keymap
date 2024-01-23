@@ -95,9 +95,9 @@
         rnav_layer {
             label="rnav_layer";
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_UP      &kp HOME            &kp UP      &kp END              &none
-&trans    &trans    &trans    &trans    &trans    &mwh SCROLL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp RET
-&trans    &trans    &trans    &trans    &trans    &kp TAB             &mwh SCROLL_LEFT    &none       &mwh SCROLL_RIGHT    &tog 2
+&trans    &trans    &trans    &trans    &trans    &msc SCRL_UP      &kp HOME            &kp UP      &kp END              &none
+&trans    &trans    &trans    &trans    &trans    &msc SCRL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp RET
+&trans    &trans    &trans    &trans    &trans    &kp TAB             &msc SCRL_LEFT    &none       &msc SCRL_RIGHT    &tog 2
           &trans    &trans    &trans    &trans    &mo MOUSE           &trans              &trans      &trans
             >;
         };
@@ -115,8 +115,8 @@
         mouse_layer {
             label="mouse_layer";
             bindings = <
-&none        &mkp LCLK           &mwh SCROLL_UP      &mkp RCLK            &trans    &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
-&mkp MCLK    &mwh SCROLL_LEFT    &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT    &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
+&none        &mkp LCLK           &msc SCRL_UP      &mkp RCLK            &trans    &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
+&mkp MCLK    &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_RIGHT    &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
 &kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans    &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
              &trans              &trans              &trans               &trans    &trans    &trans            &trans            &trans
             >;
