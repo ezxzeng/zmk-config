@@ -88,7 +88,7 @@
 &rst RST Q      &kp W         &kp E          &kp R           &kp T            &kp Y            &kp U         &kp I        &kp O       &rst RST P
 &hm LGUI A      &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G            &kp H            &hs RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
 &kp Z           &kp X         &kp C          &kp V           &kp B            &kp N            &kp M         &kp COMMA    &kp DOT     &kp FSLH
-                              &kp LCTRL      &mt LGUI ESC    &lt NAV ENTER    &bsp_l SYM BSPC  &kp SPACE     &kp RSHIFT
+                              &lt SYM SPACE  &mt LGUI ESC    &lt NAV ENTER    &bsp_l SYM BSPC  &kp SPACE     &kp RSHIFT
             >;
         };
 

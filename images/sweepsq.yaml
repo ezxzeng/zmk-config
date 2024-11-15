@@ -30,7 +30,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-space$$', h: sym}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', h: nav}
   - {t: '$$mdi:backspace$$', h: sym}
@@ -66,11 +66,11 @@ layers:
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - rnav
-  - {t: ▽, type: trans}
+  - {t: rnav, h: toggle}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', h: func}
-  - {type: held}
+  - {t: ▽, type: trans}
   - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
   rnav:
@@ -103,7 +103,7 @@ layers:
   - {t: '$$mdi:arrow-left-bold$$', s: scroll}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:arrow-right-bold$$', s: scroll}
-  - rnav
+  - {t: rnav, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -115,7 +115,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - left_num
+  - {t: left_num, h: toggle}
   - {t: '$$mdi:arrow-up-bold$$', s: scroll}
   - HOME
   - $$mdi:arrow-up-bold$$
@@ -215,10 +215,10 @@ layers:
   - F2
   - F3
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   left_num:
@@ -226,7 +226,7 @@ layers:
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - left_num
+  - {t: left_num, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
