@@ -1,5 +1,5 @@
 layers:
-  default:
+  default_layer:
   - {t: Q, h: reset}
   - W
   - E
@@ -30,13 +30,13 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-space$$', h: sym}
+  - {t: '$$mdi:keyboard-space$$', h: sym_layer}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:keyboard-return$$', h: nav}
-  - {t: '$$mdi:backspace$$', h: sym}
+  - {t: '$$mdi:keyboard-return$$', h: nav_layer}
+  - {t: '$$mdi:backspace$$', h: sym_layer}
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
-  sym:
+  sym_layer:
   - '!'
   - '@'
   - (
@@ -66,14 +66,14 @@ layers:
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - {t: rnav, h: toggle}
+  - {t: rnav_layer, h: toggle}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', h: func}
+  - {t: '$$mdi:keyboard-return$$', h: func_layer}
   - {t: ▽, type: trans}
   - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
-  rnav:
+  rnav_layer:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -103,14 +103,14 @@ layers:
   - {t: '$$mdi:arrow-left-bold$$', s: scroll}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:arrow-right-bold$$', s: scroll}
-  - {t: rnav, h: toggle}
+  - {t: rnav_layer, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - mouse
+  - mouse_layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  nav:
+  nav_layer:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -142,12 +142,12 @@ layers:
   - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - $$mdi:keyboard-space$$
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-space$$', h: func}
+  - {t: '$$mdi:keyboard-space$$', h: func_layer}
   - {type: held}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: func}
-  - {t: '$$mdi:keyboard-tab$$', h: mouse}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: func_layer}
+  - {t: '$$mdi:keyboard-tab$$', h: mouse_layer}
   - {t: ▽, type: trans}
-  mouse:
+  mouse_layer:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
   - {t: '$$mdi:arrow-up-bold$$', s: scroll}
@@ -184,7 +184,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  func:
+  func_layer:
   - $$mdi:progress-download$$
   - $$mdi:volume-high$$
   - $$mdi:brightness-5$$

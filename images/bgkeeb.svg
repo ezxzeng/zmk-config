@@ -147,8 +147,8 @@ text.footer {
     paint-order: stroke;
 }
 
-/* styling for combo tap, and key hold/shifted label text */
-text.combo, text.hold, text.shifted {
+/* styling for combo tap, and key non-tap label text */
+text.combo, text.hold, text.shifted, text.left, text.right {
     font-size: 11px;
 }
 
@@ -162,12 +162,20 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.left {
+    text-anchor: start;
+}
+
+text.right {
+    text-anchor: end;
+}
+
 text.layer-activator {
     text-decoration: underline;
 }
 
 /* styling for hold/shifted label text in combo box */
-text.combo.hold, text.combo.shifted {
+text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
     font-size: 8px;
 }
 
@@ -196,8 +204,8 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 </style>
-<g transform="translate(30, 0)" class="layer-default">
-<text x="0" y="28" class="label" id="default">default:</text>
+<g transform="translate(30, 0)" class="layer-default_layer">
+<text x="0" y="28" class="label" id="default_layer">default_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -351,14 +359,14 @@ path.combo {
 <g transform="translate(266, 196)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-return"/>
-<a href="#nav">
-<text x="0" y="24" class="key hold layer-activator">nav</text>
+<a href="#nav_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 78%">nav_layer</tspan></text>
 </a></g>
 <g transform="translate(350, 196)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
-<a href="#sym">
-<text x="0" y="24" class="key hold layer-activator">sym</text>
+<a href="#sym_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 78%">sym_layer</tspan></text>
 </a></g>
 <g transform="translate(406, 196)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -375,8 +383,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 280)" class="layer-sym">
-<text x="0" y="28" class="label" id="sym">sym:</text>
+<g transform="translate(30, 280)" class="layer-sym_layer">
+<text x="0" y="28" class="label" id="sym_layer">sym_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -522,8 +530,8 @@ path.combo {
 </g>
 <g transform="translate(588, 140)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#rnav">
-<text x="0" y="0" class="key tap layer-activator">rnav</text>
+<a href="#rnav_layer">
+<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 70%">rnav_layer</tspan></text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(42, 196)" class="key trans keypos-30">
@@ -541,8 +549,8 @@ path.combo {
 <g transform="translate(266, 196)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-return"/>
-<a href="#func">
-<text x="0" y="24" class="key hold layer-activator">func</text>
+<a href="#func_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 70%">func_layer</tspan></text>
 </a></g>
 <g transform="translate(350, 196)" class="key held keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
@@ -561,8 +569,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 560)" class="layer-rnav">
-<text x="0" y="28" class="label" id="rnav">rnav:</text>
+<g transform="translate(30, 560)" class="layer-rnav_layer">
+<text x="0" y="28" class="label" id="rnav_layer">rnav_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -686,8 +694,8 @@ path.combo {
 </g>
 <g transform="translate(588, 140)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#rnav">
-<text x="0" y="0" class="key tap layer-activator">rnav</text>
+<a href="#rnav_layer">
+<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 70%">rnav_layer</tspan></text>
 </a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(42, 196)" class="key trans keypos-30">
@@ -708,8 +716,8 @@ path.combo {
 </g>
 <g transform="translate(350, 196)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#mouse">
-<text x="0" y="0" class="key tap layer-activator">mouse</text>
+<a href="#mouse_layer">
+<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 64%">mouse_layer</tspan></text>
 </a></g>
 <g transform="translate(406, 196)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -725,8 +733,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 840)" class="layer-nav">
-<text x="0" y="28" class="label" id="nav">nav:</text>
+<g transform="translate(30, 840)" class="layer-nav_layer">
+<text x="0" y="28" class="label" id="nav_layer">nav_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -865,8 +873,8 @@ path.combo {
 <g transform="translate(210, 196)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-space"/>
-<a href="#func">
-<text x="0" y="24" class="key hold layer-activator">func</text>
+<a href="#func_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 70%">func_layer</tspan></text>
 </a></g>
 <g transform="translate(266, 196)" class="key held keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
@@ -874,14 +882,14 @@ path.combo {
 <g transform="translate(350, 196)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace-reverse-outline"/>
-<a href="#func">
-<text x="0" y="24" class="key hold layer-activator">func</text>
+<a href="#func_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 70%">func_layer</tspan></text>
 </a></g>
 <g transform="translate(406, 196)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-tab"/>
-<a href="#mouse">
-<text x="0" y="24" class="key hold layer-activator">mouse</text>
+<a href="#mouse_layer">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 64%">mouse_layer</tspan></text>
 </a></g>
 <g transform="translate(462, 196)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -893,8 +901,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1120)" class="layer-mouse">
-<text x="0" y="28" class="label" id="mouse">mouse:</text>
+<g transform="translate(30, 1120)" class="layer-mouse_layer">
+<text x="0" y="28" class="label" id="mouse_layer">mouse_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
@@ -1069,8 +1077,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1400)" class="layer-func">
-<text x="0" y="28" class="label" id="func">func:</text>
+<g transform="translate(30, 1400)" class="layer-func_layer">
+<text x="0" y="28" class="label" id="func_layer">func_layer:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
