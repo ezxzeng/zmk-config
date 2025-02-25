@@ -25,7 +25,64 @@ combos {
         compatible = "zmk,combos";
 };
 
+
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <0>;
+        };
+
+        hs: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <0>;
+        };
+
+        rst: reset_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "reset_hold_tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <999>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <200>;
+        };
+
+        bsp_l: bsp_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BSP_L";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+        };
+
+        placeholder: placeholder {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PLACEHOLDER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+  
+    };
+
 keymap {
+
     compatible = "zmk,keymap";
 
     default_layer {
