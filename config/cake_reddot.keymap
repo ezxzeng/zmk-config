@@ -61,48 +61,6 @@
 combos {
         compatible = "zmk,combos";
 
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <4 5>; // KP: VB
-            bindings = <&mt RBRC LBRC>; // }{
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <6 7>; // KP: NM
-            bindings = <&kp RBRC>; // }
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_lpar {
-            timeout-ms = <50>;
-            key-positions = <16 17>; // KP: FG
-            bindings = <&mt RPAR LPAR>; // )(
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rpar {
-            timeout-ms = <50>;
-            key-positions = <18 19>; // KP: HJ
-            bindings = <&kp RPAR>; // )
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <28 29>; // KP: RT
-            bindings = <&mt RBKT LBKT>; // ][ // 可以用CMD+这个单手返回到代码上一个编辑的地方 或者网页返回
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rbkt {
-            timeout-ms = <50>;
-            key-positions = <30 31>; // KP: YU
-            bindings = <&kp RBKT>; // ]
-            layers = <0 1 2 3 4 5>;
-        };
-
         esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
