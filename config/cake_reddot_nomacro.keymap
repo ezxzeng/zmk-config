@@ -125,4 +125,55 @@ keymap {
       >;
     };
   };
+
+        mouse_layer {
+            label="mouse_layer";
+            bindings = <
+&none        &mkp LCLK           &msc SCRL_UP        &mkp RCLK            &trans    &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
+&mkp MCLK    &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT      &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
+&kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans    &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
+                                 &trans              &trans               &trans    &trans    &trans            &trans
+            >;
+        };
+
+        func_layer {
+            label="func_layer";
+            bindings = <
+&bootloader        &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC    &bt BT_SEL 0    &bt BT_SEL 1    &kp F12  &kp F7  &kp F8  &kp F9  &trans
+&out OUT_USB       &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp PRINTSCREEN    &mt C_MUTE K_MUTE    &out OUT_BLE            &bt BT_SEL 4    &bt BT_CLR      &kp F10  &kp F1  &kp F2  &kp F3  &trans
+                                        &trans                  &trans          &trans          &trans   &trans  &trans
+            >;
+        };
+
+        left_num {
+            label="left_num";
+            bindings = <
+&kp EQUAL         &kp N7         &kp N8          &kp N9           &tog LNUM          &trans  &trans  &trans  &trans  &trans
+&hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6     &kp DOT            &trans  &trans  &trans  &trans  &trans
+&kp N0            &kp N1         &kp N2          &kp N3           &kp COMMA          &trans  &trans  &trans  &trans  &trans
+                                 &trans          &mt LSHFT TAB    &lt LSYM ENTER     &trans  &trans  &trans
+            >;
+        };
+
+        left_sym {
+            label="left_sym";
+            bindings = <
+&kp ESC      &kp COLON            &kp LPAR           &kp RPAR    &kp BSPC     &trans  &trans  &trans  &trans  &trans
+&kp GRAVE    &kp SQT              &kp LBKT           &kp RBKT    &kp UNDER    &trans  &trans  &trans  &trans  &trans
+&kp BSLH     &kp DOUBLE_QUOTES    &kp LT             &kp GT      &kp FSLH     &trans  &trans  &trans  &trans  &trans
+                                  &mt LSHFT SPACE    &trans      &trans       &trans  &trans  &trans
+            >;
+        };
+
+        reset {
+            label="reset";
+            bindings = <
+&trans    &trans    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader  &out OUT_BLE  &out OUT_USB  &trans  &trans
+&trans    &trans    &trans          &trans          &sys_reset     &sys_reset   &trans        &trans        &trans  &trans
+&trans    &trans    &trans          &trans          &trans         &trans       &trans        &trans        &trans  &trans
+                    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader  &out OUT_BLE  &out OUT_USB
+            >;
+        };
+    };
 };
