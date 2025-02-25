@@ -92,8 +92,9 @@
 &trans  &hm LGUI A      &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G          &kp H          &hs RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI         &trans
 &trans  &kp Z           &kp X         &kp C          &kp V           &kp B          &kp N          &kp M         &kp COMMA    &kp DOT     &kp FSLH              &trans
 &trans  &lt NAV ENTER   &trans        &trans         &lt SYM SPACE   &mt LGUI ESC   &kp SPACE      &kp RSHIFT    &trans       &trans      &bsp_l SYM BACKSPACE  &trans
->;
-        };
+
+      >;
+    };
 
         sym_layer {
             label="sym_layer";
@@ -171,7 +172,7 @@
 &trans  &trans         &trans    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader   &out OUT_BLE  &out OUT_USB  &trans  &trans        &trans
 &trans  &trans         &trans    &trans          &trans          &sys_reset     &sys_reset    &trans        &trans        &trans  &trans        &trans
 &trans  &trans         &trans    &trans          &trans          &trans         &trans        &trans        &trans        &trans  &trans        &trans
-&trans  &bootloader    &trans    &trans          &out OUT_USB    &out OUT_BLE   &out OUT_BLE  &out OUT_USB  &trans        &trans  &bootloader   trans  
+&trans  &bootloader    &trans    &trans          &out OUT_USB    &out OUT_BLE   &out OUT_BLE  &out OUT_USB  &trans        &trans  &bootloader   &trans  
             >;
         };
     };
