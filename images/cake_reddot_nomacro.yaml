@@ -1,6 +1,6 @@
 layers:
   default_layer:
-  - {t: ▽, type: trans}
+  - $$mdi:keyboard-esc$$
   - {t: Q, h: reset}
   - W
   - E
@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - {t: P, h: reset}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -23,8 +23,8 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-command$$', s: ':'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: \, s: '|'}
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -35,19 +35,19 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
   - {t: '$$mdi:keyboard-return$$', h: nav_layer}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - (
+  - )
   - {t: '$$mdi:keyboard-space$$', h: sym_layer}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:backspace$$', h: sym_layer}
-  - {t: ▽, type: trans}
+  - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   sym_layer:
   - {t: ▽, type: trans}
   - '!'
