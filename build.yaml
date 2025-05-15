@@ -18,4 +18,5 @@ shield: [
   "bgkeeb_left", "bgkeeb_right",
   "sweepsq_left", "sweepsq_right",
   # "cradio_left", "cradio_right",
+  "lily58_left", "lily58_right",
 ]
