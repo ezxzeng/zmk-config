@@ -54,9 +54,9 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - LMETA
   - lower
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - RET
+  - $$mdi:keyboard-space$$
   - raise
   - $$mdi:apple-keyboard-control$$
   raise:
@@ -177,6 +177,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [52, 42, 0]
-  k: $$mdi:bluetooth-off$$
