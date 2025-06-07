@@ -1,6 +1,6 @@
 file_format: "1"
-id: corne_tp
-name: Corne TP
+id: cake_reddot
+name: Cake Reddot
 type: shield
 url: https://github.com/foostan/crkbd/
 requires: [pro_micro]
@@ -8,5 +8,5 @@ exposes: [i2c_oled]
 features:
   - keys
 siblings:
-  - corne_tp_left
-  - corne_tp_right
+  - cake_reddot_left
+  - cake_reddot_right
