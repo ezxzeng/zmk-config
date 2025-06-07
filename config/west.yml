@@ -60,7 +60,7 @@ manifest:
     # Module for PS/2 mouse & TP driver
     - name: kb_zmk_ps2_mouse_trackpoint_driver
       remote: infused-kim
-      revision: 8c0c8c8
+      revision: main
 
   self:
     path: config
