@@ -64,7 +64,6 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -74,7 +73,6 @@
 
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "balanced";
@@ -84,7 +82,6 @@
 
         rst: reset_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "reset_hold_tap";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <999>;
@@ -94,7 +91,6 @@
 
         bsp_l: bsp_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "BSP_L";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -103,7 +99,6 @@
 
         placeholder: placeholder {
             compatible = "zmk,behavior-hold-tap";
-            label = "PLACEHOLDER";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
