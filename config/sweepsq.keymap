@@ -1,7 +1,18 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT 0
+#define SYM     1
+#define RNAV    2
+#define NAV     3
+#define MOUSE   4
+#define FUNC    5
+#define LNUM    6
+#define LSYM    7
+#define RST     8
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -72,42 +83,57 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label="default_layer";
             bindings = <
-&rst 7 Q      &kp W         &kp E          &kp R           &kp T          &kp Y          &kp U         &kp I        &kp O       &rst 7 P
-&hm LGUI A    &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G          &kp H          &hs RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
-&kp Z         &kp X         &kp C          &kp V           &kp B          &kp N          &kp M         &kp COMMA    &kp DOT     &kp FSLH
-                            &kp LCTRL      &mt LGUI ESC    &lt 3 ENTER    &bsp_l 1 BSPC  &kp SPACE     &kp RSHIFT
+&rst RST Q      &kp W         &kp E          &kp R           &kp T            &kp Y            &kp U         &kp I        &kp O       &rst RST P
+&hm LGUI A      &hm LALT S    &hm LCTRL D    &hs LSHIFT F    &kp G            &kp H            &hs RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI
+&kp Z           &kp X         &kp C          &kp V           &kp B            &kp N            &kp M         &kp COMMA    &kp DOT     &kp FSLH
+                              &lt SYM SPACE  &mt LGUI ESC    &lt NAV ENTER    &bsp_l SYM BSPC  &kp SPACE     &kp RSHIFT
             >;
         };
 
         sym_layer {
+            label="sym_layer";
             bindings = <
-&kp EXCL          &kp AT               &kp LPAR          &kp RPAR           &kp BACKSLASH    &kp EQUAL  &kp N7        &kp N8        &kp N9       &kp BSPC
-&hm LGUI GRAVE    &hm LALT APOS        &hm LCTRL LBKT    &hs LSHIFT RBKT    &kp UNDER        &kp MINUS  &hs RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SEMI
-&kp PIPE          &kp DOUBLE_QUOTES    &kp LT            &kp GT             &kp SLASH        &kp N0     &kp N1        &kp N2        &kp N3       &tog 2
-                                       &trans            &trans             &lt 4 ENTER      &trans     &kp SPACE     &trans
+&kp EXCL          &kp AT               &kp LPAR          &kp RPAR           &kp BACKSLASH       &kp EQUAL  &kp N7        &kp N8        &kp N9       &kp BSPC
+&hm LGUI GRAVE    &hm LALT APOS        &hm LCTRL LBKT    &hs LSHIFT RBKT    &kp UNDER           &kp MINUS  &hs RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SEMI
+&kp PIPE          &kp DOUBLE_QUOTES    &kp LT            &kp GT             &kp SLASH           &kp N0     &kp N1        &kp N2        &kp N3       &tog 2
+                                       &trans            &trans             &lt FUNC ENTER      &trans     &kp SPACE     &trans
             >;
         };
 
         rnav_layer {
+            label="rnav_layer";
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &kp C_AC_SCROLL_UP    &kp HOME  &kp UP    &kp END    &none
-&trans    &trans    &trans    &trans    &trans    &kp C_AC_SCROLL_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
-&trans    &trans    &trans    &trans    &trans    &kp TAB               &none     &none     &none      &tog 2
-                    &trans    &trans    &trans    &trans                &trans    &trans
+&trans    &trans    &trans    &trans    &trans    &msc SCRL_UP      &kp HOME            &kp UP      &kp END              &kp ESC
+&trans    &trans    &trans    &trans    &trans    &msc SCRL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp ENTER
+&trans    &trans    &trans    &trans    &trans    &kp TAB           &msc SCRL_LEFT      &none       &msc SCRL_RIGHT      &tog 2
+                    &trans    &trans    &trans    &mo MOUSE         &trans              &trans
             >;
         };
 
         nav_layer {
+            label="nav_layer";
             bindings = <
-&kp LEFT    &kp DOWN    &kp UP       &kp RIGHT    &tog 5      &none      &kp HOME  &kp UP    &kp END    &kp PG_UP
-&kp LGUI    &kp LALT    &kp LCTRL    &kp LSHFT    &kp BSPC    &none      &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
-&none       &none       &none        &none        &kp CAPS    &none      &none     &none     &none      &none
-                        &kp DEL      &kp SPACE    &trans      &lt 4 DEL  &kp TAB   &trans
+&kp LEFT            &kp DOWN           &kp UP            &kp RIGHT           &tog LNUM      &msc SCRL_UP      &kp HOME            &kp UP      &kp END              &kp PG_UP
+&kp LGUI            &kp LALT           &kp LCTRL         &kp LSHFT           &kp BSPC       &msc SCRL_DOWN    &kp LEFT            &kp DOWN    &kp RIGHT            &kp PG_DN
+&msc SCRL_LEFT      &msc SCRL_DOWN     &msc SCRL_UP      &msc SCRL_RIGHT     &kp CAPS       &none             &msc SCRL_LEFT      &none       &msc SCRL_RIGHT      &kp SPACE
+                                       &kp DEL           &lt FUNC SPACE      &trans         &lt FUNC DEL      &lt MOUSE TAB       &trans
+            >;
+        };
+
+        mouse_layer {
+            label="mouse_layer";
+            bindings = <
+&none        &mkp LCLK           &msc SCRL_UP        &mkp RCLK            &trans    &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
+&mkp MCLK    &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT      &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
+&kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans    &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
+                                 &trans              &trans               &trans    &trans    &trans            &trans
             >;
         };
 
         func_layer {
+            label="func_layer";
             bindings = <
 &bootloader        &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC    &bt BT_SEL 0    &bt BT_SEL 1    &kp F12  &kp F7  &kp F8  &kp F9  &trans
 &out OUT_USB       &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC    &bt BT_SEL 2    &bt BT_SEL 3    &kp F11  &kp F4  &kp F5  &kp F6  &trans
@@ -117,15 +143,17 @@
         };
 
         left_num {
+            label="left_num";
             bindings = <
-&kp EQUAL         &kp N7         &kp N8          &kp N9           &tog 5         &trans  &trans  &trans  &trans  &trans
-&hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6     &kp DOT        &trans  &trans  &trans  &trans  &trans
-&kp N0            &kp N1         &kp N2          &kp N3           &kp COMMA      &trans  &trans  &trans  &trans  &trans
-                                 &trans          &mt LSHFT TAB    &lt 6 ENTER    &trans  &trans  &trans
+&kp EQUAL         &kp N7         &kp N8          &kp N9           &tog LNUM          &trans  &trans  &trans  &trans  &trans
+&hm LGUI MINUS    &hm LALT N4    &hm LCTRL N5    &hs LSHFT N6     &kp DOT            &trans  &trans  &trans  &trans  &trans
+&kp N0            &kp N1         &kp N2          &kp N3           &kp COMMA          &trans  &trans  &trans  &trans  &trans
+                                 &trans          &mt LSHFT TAB    &lt LSYM ENTER     &trans  &trans  &trans
             >;
         };
 
         left_sym {
+            label="left_sym";
             bindings = <
 &kp ESC      &kp COLON            &kp LPAR           &kp RPAR    &kp BSPC     &trans  &trans  &trans  &trans  &trans
 &kp GRAVE    &kp SQT              &kp LBKT           &kp RBKT    &kp UNDER    &trans  &trans  &trans  &trans  &trans
@@ -135,6 +163,7 @@
         };
 
         reset {
+            label="reset";
             bindings = <
 &trans    &trans    &out OUT_USB    &out OUT_BLE    &bootloader    &bootloader  &out OUT_BLE  &out OUT_USB  &trans  &trans
 &trans    &trans    &trans          &trans          &sys_reset     &sys_reset   &trans        &trans        &trans  &trans
