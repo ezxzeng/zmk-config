@@ -1,6 +1,5 @@
 .west
 modules
-zephyr
 zmk
 build
 *.DS_Store
