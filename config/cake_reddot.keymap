@@ -19,6 +19,9 @@
 #define LNUM    6
 #define LSYM    7
 #define RST     8
+#define MOUSE_KEYS 9
+#define MOUSE_TP 10
+#define MOUSE_TP_SET 11
 
 /*
  * Defines to enable/disable features
@@ -112,48 +115,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <4 5>; // KP: VB
-            bindings = <&mt RBRC LBRC>; // }{
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <6 7>; // KP: NM
-            bindings = <&kp RBRC>; // }
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_lpar {
-            timeout-ms = <50>;
-            key-positions = <16 17>; // KP: FG
-            bindings = <&mt RPAR LPAR>; // )(
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rpar {
-            timeout-ms = <50>;
-            key-positions = <18 19>; // KP: HJ
-            bindings = <&kp RPAR>; // )
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <28 29>; // KP: RT
-            bindings = <&mt RBKT LBKT>; // ][ // 可以用CMD+这个单手返回到代码上一个编辑的地方 或者网页返回
-            layers = <0 1 2 3 4 5>;
-        };
-
-        combo_rbkt {
-            timeout-ms = <50>;
-            key-positions = <30 31>; // KP: YU
-            bindings = <&kp RBKT>; // ]
-            layers = <0 1 2 3 4 5>;
-        };
 
         esc {
             timeout-ms = <50>;
@@ -269,6 +230,16 @@
       >;
     };
 
+        mouse_layer {
+            label = "mouse_layer";
+            bindings = <
+&trans  &none      &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans     &trans
+&trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK  &trans
+&trans  &kp LGUI   &kp LALT        &kp LCTRL       &kp LSHFT        &trans  &trans  &kp RSHFT       &kp RCTRL       &kp RALT         &kp RGUI   &trans
+&trans  &trans     &trans          &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans     &trans
+            >;
+        };
+
     func_layer {
       display-name = "func_layer";
       bindings = <
@@ -364,4 +335,5 @@
     };
 
 #endif
-  }; 
+  };
+};
