@@ -919,7 +919,7 @@ path.combo {
 <g transform="translate(476, 28)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_Y</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*1500)</tspan>
+<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_Y</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*3000)</tspan>
 </text>
 </g>
 <g transform="translate(532, 28)" class="key keypos-8">
@@ -963,19 +963,19 @@ path.combo {
 <g transform="translate(420, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_X</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*1500)</tspan>
+<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_X</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*3000)</tspan>
 </text>
 </g>
 <g transform="translate(476, 84)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_Y(</tspan><tspan x="0" dy="1.2em">2*1500)</tspan>
+<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_Y(</tspan><tspan x="0" dy="1.2em">2*3000)</tspan>
 </text>
 </g>
 <g transform="translate(532, 84)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_X(</tspan><tspan x="0" dy="1.2em">2*1500)</tspan>
+<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_X(</tspan><tspan x="0" dy="1.2em">2*3000)</tspan>
 </text>
 </g>
 <g transform="translate(588, 84)" class="key keypos-19">

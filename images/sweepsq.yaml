@@ -155,7 +155,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
-  - '&mmv MOVE_Y(-2*1500)'
+  - '&mmv MOVE_Y(-2*3000)'
   - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   - {t: ▽, type: trans}
   - {t: '3', h: Middle click, s: '$$mdi:mouse$$'}
@@ -164,9 +164,9 @@ layers:
   - {t: '$$mdi:arrow-right-bold$$', s: scroll}
   - {type: held}
   - {t: ▽, type: trans}
-  - '&mmv MOVE_X(-2*1500)'
-  - '&mmv MOVE_Y(2*1500)'
-  - '&mmv MOVE_X(2*1500)'
+  - '&mmv MOVE_X(-2*3000)'
+  - '&mmv MOVE_Y(2*3000)'
+  - '&mmv MOVE_X(2*3000)'
   - {t: '3', h: Middle click, s: '$$mdi:mouse$$'}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$

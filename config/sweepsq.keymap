@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
@@ -35,9 +35,7 @@
 / {
     behaviors {
         &mmv {
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <300>;
+            time-to-max-speed-ms = <2000>;
             acceleration-exponent = <1>;
         };
 
