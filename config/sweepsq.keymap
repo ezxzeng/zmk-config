@@ -26,6 +26,11 @@
     continue-list = <UNDERSCORE MINUS>;
 };
 
+&mmv {
+    time-to-max-speed-ms = <2000>;
+    acceleration-exponent = <1>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -34,11 +39,6 @@
 
 / {
     behaviors {
-        &mmv {
-            time-to-max-speed-ms = <2000>;
-            acceleration-exponent = <1>;
-        };
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
