@@ -918,9 +918,8 @@ path.combo {
 </g>
 <g transform="translate(476, 28)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_Y</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*3000)</tspan>
-</text>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-up-bold"/>
+<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-5" y="-24" height="10" width="10.0" class="key shifted glyph mdi:mouse"/>
 </g>
 <g transform="translate(532, 28)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -953,8 +952,9 @@ path.combo {
 <use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-right-bold"/>
 <text x="0" y="-24" class="key shifted">scroll</text>
 </g>
-<g transform="translate(252, 84)" class="key held keypos-14">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
+<g transform="translate(252, 84)" class="key trans keypos-14">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(364, 84)" class="key trans keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -962,21 +962,18 @@ path.combo {
 </g>
 <g transform="translate(420, 84)" class="key keypos-16">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mmv</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">MOVE_X</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">(-2*3000)</tspan>
-</text>
+<use href="#mdi:arrow-left-bold" xlink:href="#mdi:arrow-left-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-left-bold"/>
+<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-5" y="-24" height="10" width="10.0" class="key shifted glyph mdi:mouse"/>
 </g>
 <g transform="translate(476, 84)" class="key keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_Y(</tspan><tspan x="0" dy="1.2em">2*3000)</tspan>
-</text>
+<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-down-bold"/>
+<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-5" y="-24" height="10" width="10.0" class="key shifted glyph mdi:mouse"/>
 </g>
 <g transform="translate(532, 84)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;mmv</tspan><tspan x="0" dy="1.2em">MOVE_X(</tspan><tspan x="0" dy="1.2em">2*3000)</tspan>
-</text>
+<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-right-bold"/>
+<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-5" y="-24" height="10" width="10.0" class="key shifted glyph mdi:mouse"/>
 </g>
 <g transform="translate(588, 84)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
@@ -11,16 +11,10 @@
 #define RNAV    2
 #define NAV     3
 #define MOUSE   4
-#define FMOUSE  5
-#define FUNC    6
-#define LNUM    7
-#define LSYM    8
-#define RST     9
-
-#define F_MOVE_UP       MOVE_Y(-2*ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define F_MOVE_DOWN     MOVE_Y(2*ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define F_MOVE_LEFT     MOVE_X(-2*ZMK_POINTING_DEFAULT_MOVE_VAL)
-#define F_MOVE_RIGHT    MOVE_X(2*ZMK_POINTING_DEFAULT_MOVE_VAL)
+#define FUNC    5
+#define LNUM    6
+#define LSYM    7
+#define RST     8
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -138,20 +132,10 @@
         mouse_layer {
             display-name = "mouse_layer";
             bindings = <
-&none        &mkp LCLK           &msc SCRL_UP        &mkp RCLK            &trans        &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
-&mkp MCLK    &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT      &mo FMOUSE    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
-&kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans        &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
-                                 &trans              &trans               &trans        &trans    &trans            &trans
-            >;
-        };
-
-        fast_mouse_layer {
-            display-name = "mouse_layer";
-            bindings = <
-&none        &mkp LCLK           &msc SCRL_UP        &mkp RCLK            &trans         &trans    &mkp LCLK         &mmv F_MOVE_UP      &mkp RCLK          &trans
-&mkp MCLK    &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT      &trans         &trans    &mmv F_MOVE_LEFT  &mmv F_MOVE_DOWN    &mmv F_MOVE_RIGHT    &mkp MCLK
-&kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans         &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
-                                 &trans              &trans               &trans         &trans    &trans            &trans
+&none        &mkp LCLK           &msc SCRL_UP        &mkp RCLK            &trans    &trans    &mkp LCLK         &mmv MOVE_UP      &mkp RCLK          &trans
+&mkp MCLK    &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT      &trans    &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mkp MCLK
+&kp LGUI     &kp LALT            &kp LCTRL           &kp LSHFT            &trans    &trans    &kp RSHFT         &kp RCTRL         &kp RALT           &kp RGUI
+                                 &trans              &trans               &trans    &trans    &trans            &trans
             >;
         };
 
