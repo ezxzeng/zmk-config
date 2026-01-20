@@ -74,19 +74,19 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - up
+  - $$mdi:arrow-up-bold$$
   - {t: MUTE, h: '$$mdi:volume-off$$'}
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
   - PG UP
-  - home
+  - HOME
   - $$mdi:arrow-up-bold$$
-  - end
+  - END
   - {t: '-', s: _}
   - {t: '=', s: +}
   - $$mdi:apple-keyboard-caps$$
-  - left
-  - down
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
   - right
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}

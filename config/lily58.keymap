@@ -47,8 +47,8 @@
 
             bindings = <
 &kp GRAVE      &kp F1        &kp F2        &kp F3              &kp F4        &kp F5                                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp DEL
-&none          &none         &kp up        &mt C_MUTE K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP                           &kp PG_UP &kp home  &kp UP    &kp end   &kp MINUS &kp EQUAL
-&kp CAPSLOCK   &kp left      &kp down      &kp right           &none         &none                                  &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &none     &none 
+&none          &none         &kp UP        &mt C_MUTE K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP                           &kp PG_UP &kp HOME  &kp UP    &kp END   &kp MINUS &kp EQUAL
+&kp CAPSLOCK   &kp LEFT      &kp DOWN      &kp right           &none         &none                                  &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &none     &none 
 &studio_unlock &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4 &out OUT_BLE  &kp INSERT  &kp PSCRN &none     &none     &none     &none     &none 
                                            &none               &none         &trans       &out OUT_USB  &none       &trans    &none     &none 
             >;
