@@ -79,5 +79,9 @@
         extra6 {
             status = "reserved";
         };
+
+        extra7 {
+            status = "reserved";
+        };
     };
 };
