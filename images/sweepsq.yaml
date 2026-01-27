@@ -30,7 +30,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-space$$', h: sym_layer}
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:keyboard-return$$', h: nav_layer}
   - {t: '$$mdi:backspace$$', h: sym_layer}
@@ -66,49 +66,12 @@ layers:
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - {t: rnav_layer, h: toggle}
-  - {type: held}
+  - {t: nav_layer, h: toggle}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', h: func_layer}
-  - {t: ▽, type: trans}
+  - {type: held}
   - $$mdi:keyboard-space$$
-  - {t: ▽, type: trans}
-  rnav_layer:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
-  - HOME
-  - $$mdi:arrow-up-bold$$
-  - END
-  - $$mdi:keyboard-esc$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
-  - {t: rnav_layer, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - mouse_layer
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   nav_layer:
   - $$mdi:arrow-left-bold$$
@@ -180,9 +143,9 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   func_layer:
   - $$mdi:progress-download$$
@@ -215,10 +178,47 @@ layers:
   - F2
   - F3
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {type: held}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  rnav_layer:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:arrow-up-bold$$', s: scroll}
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - $$mdi:keyboard-esc$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:arrow-down-bold$$', s: scroll}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:arrow-left-bold$$', s: scroll}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:arrow-right-bold$$', s: scroll}
+  - {t: nav_layer, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - mouse_layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   left_num:
