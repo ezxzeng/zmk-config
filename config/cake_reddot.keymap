@@ -59,6 +59,20 @@
   #define U_TOG_TP_SET &none
 #endif  // HAS_MOUSE_TP
 
+// for using the formatting plugin
+// remember to comment out the ifdef before use
+#define _U_TOG_TP_SET   U_TOG_TP_SET
+#define _U_MSS_TP_S_D   U_MSS_TP_S_D
+#define _U_MSS_TP_S_I   U_MSS_TP_S_I
+#define _U_MSS_TP_PT_I  U_MSS_TP_PT_I
+#define _U_MSS_RESET    U_MSS_RESET
+#define _U_MSS_TP_NI_D  U_MSS_TP_NI_D
+#define _U_MSS_TP_NI_I  U_MSS_TP_NI_I
+#define _U_MSS_TP_PT_D  U_MSS_TP_PT_D
+#define _U_MSS_LOG      U_MSS_LOG
+#define _U_MSS_TP_V6_D  U_MSS_TP_V6_D
+#define _U_MSS_TP_V6_I  U_MSS_TP_V6_I
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -182,110 +196,253 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "default_layer";
+            label = "default_layer";
             bindings = <
-&kp ESC    &rst RST Q   &kp W        &kp E        &kp R         &kp T                    &kp Y      &kp U               &kp I         &kp O       &rst RST P          &kp BSPC
-&kp TAB    &hm LGUI A   &hm LALT S   &hm LCTRL D  &hs LSHIFT F  &kp G                    &kp H      &hs RSHIFT J        &hm RCTRL K   &hm RALT L  &hm RGUI SEMI       &kp BSLH
-&kp LSHFT  &kp Z        &kp X        &kp C        &kp V         &kp B                    &kp N      &kp M               &kp COMMA     &kp DOT     &kp FSLH            &kp RSHFT
-&kp LPAR   &kp RPAR     &lt 1 SPACE  &mt LGUI ESC &lt 3 ENTER   &mkp LCLK                &mkp RCLK  &bsp_l 1 BACKSPACE  &kp SPACE     &kp RSHFT   &kp LBKT            &kp RBKT
+//    ┌──────┬──────────────┬────────────┬─────────────┬────────────┬──────────┐   ┌──────┬───────────────┬────────────┬────────────┬──────────────┬──────┐
+//    │ esc  │ &rst rsftT Q │     W      │      E      │     R      │    T     │   │  Y   │       U       │     I      │     O      │ &rst rsftT P │ bspc │
+//    ├──────┼──────────────┼────────────┼─────────────┼────────────┼──────────┤   ├──────┼───────────────┼────────────┼────────────┼──────────────┼──────┤
+//    │ tab  │  &hm lgui A  │ &hm lalt S │ &hm lctl D  │ &hs lsft F │    G     │   │  H   │  &hs rsft J   │ &hm rctl K │ &hm ralt L │  &hm rgui ;  │  \   │
+//    ├──────┼──────────────┼────────────┼─────────────┼────────────┼──────────┤   ├──────┼───────────────┼────────────┼────────────┼──────────────┼──────┤
+//    │ lsft │      Z       │     X      │      C      │     V      │    B     │   │  N   │       M       │     ,      │     .      │      /       │ rsft │
+//    └──────┼──────────────┼────────────┼─────────────┴────────────┴──────────┘   └──────┴───────────────┴────────────┼────────────┼──────────────┼──────┘
+//           │      (       │     )      │                                                                             │     [      │      ]       │
+//           └──────────────┴────────────┼─────────────┬────────────┬──────────┐   ┌──────┬───────────────┬────────────┼────────────┴──────────────┘
+//                                       │ mt lgui esc │  lt 3 ent  │ lt 1 spc │   │ rsft │ &bsp_l 1 bspc │    spc     │
+//                                       └─────────────┴────────────┼──────────┤   ├──────┼───────────────┴────────────┘
+//                                                                  │   lclk   │   │ rclk │
+//                                                                  └──────────┘   └──────┘
+  &kp ESC     &rst RST Q   &kp W        &kp E                     &kp R          &kp T             &kp Y             &kp U                &kp I         &kp O        &rst RST P      &kp BSPC
+  &kp TAB     &hm LGUI A   &hm LALT S   &hm LCTRL D               &hs LSHIFT F   &kp G             &kp H             &hs RSHIFT J         &hm RCTRL K   &hm RALT L   &hm RGUI SEMI   &kp BSLH
+  &kp LSHFT   &kp Z        &kp X        &kp C                     &kp V          &kp B             &kp N             &kp M                &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+              &kp LPAR     &kp RPAR                                                                                                                     &kp LBKT     &kp RBKT
+                                        &mt LEFT_COMMAND ESCAPE   &lt 3 ENTER    &lt 1 SPACE       &kp RIGHT_SHIFT   &bsp_l 1 BACKSPACE   &kp SPACE
+                                                                                 &mkp LCLK         &mkp RCLK
             >;
         };
 
         sym_layer {
-            display-name = "sym_layer";
+            label = "sym_layer";
             bindings = <
-&trans  &kp EXCL        &kp AT             &kp LPAR        &kp RPAR         &kp BACKSLASH  &kp EQUAL  &kp N7        &kp N8        &kp N9       &kp BSPC       &trans
-&trans  &hm LGUI GRAVE  &hm LALT APOS      &hm LCTRL LBKT  &hs LSHIFT RBKT  &kp UNDER      &kp MINUS  &hs RSHFT N4  &hm RCTRL N5  &hm RALT N6  &hm RGUI SEMI  &trans
-&trans  &kp PIPE        &kp DOUBLE_QUOTES  &kp LT          &kp GT           &kp SLASH      &kp N0     &kp N1        &kp N2        &kp N3       &tog 2         &trans
-&trans &trans          &trans              &trans          &lt 5 ENTER      &trans         &trans     &trans        &trans        &trans       &trans         &trans
-
-
+//    ┌─────┬────────────┬────────────┬────────────┬────────────┬─────┐   ┌─────┬────────────┬────────────┬────────────┬────────────┬─────┐
+//    │     │     !      │     @      │     (      │     )      │  \  │   │  =  │     7      │     8      │     9      │    bspc    │     │
+//    ├─────┼────────────┼────────────┼────────────┼────────────┼─────┤   ├─────┼────────────┼────────────┼────────────┼────────────┼─────┤
+//    │     │ &hm lgui ` │ &hm lalt ' │ &hm lctl [ │ &hs lsft ] │  _  │   │  -  │ &hs rsft 4 │ &hm rctl 5 │ &hm ralt 6 │ &hm rgui ; │     │
+//    ├─────┼────────────┼────────────┼────────────┼────────────┼─────┤   ├─────┼────────────┼────────────┼────────────┼────────────┼─────┤
+//    │     │     |      │     "      │     <      │     >      │  /  │   │  0  │     1      │     2      │     3      │   tog 2    │     │
+//    └─────┼────────────┼────────────┼────────────┴────────────┴─────┘   └─────┴────────────┴────────────┼────────────┼────────────┼─────┘
+//          │            │            │                                                                   │            │            │
+//          └────────────┴────────────┼────────────┬────────────┬─────┐   ┌─────┬────────────┬────────────┼────────────┴────────────┘
+//                                    │            │  lt 5 ent  │     │   │     │            │    spc     │
+//                                    └────────────┴────────────┼─────┤   ├─────┼────────────┴────────────┘
+//                                                              │     │   │     │
+//                                                              └─────┘   └─────┘
+  &trans   &kp EXCL         &kp AT              &kp LPAR         &kp RPAR          &kp BACKSLASH       &kp EQUAL   &kp N7         &kp N8         &kp N9        &kp BSPC        &trans
+  &trans   &hm LGUI GRAVE   &hm LALT APOS       &hm LCTRL LBKT   &hs LSHIFT RBKT   &kp UNDER           &kp MINUS   &hs RSHFT N4   &hm RCTRL N5   &hm RALT N6   &hm RGUI SEMI   &trans
+  &trans   &kp PIPE         &kp DOUBLE_QUOTES   &kp LT           &kp GT            &kp SLASH           &kp N0      &kp N1         &kp N2         &kp N3        &tog 2          &trans
+           &trans           &trans                                                                                                               &trans        &trans
+                                                &trans           &lt 5 ENTER       &trans              &trans      &trans         &kp SPACE
+                                                                                   &trans              &trans
             >;
         };
 
         rnav_layer {
-            display-name = "rnav_layer";
+            label = "rnav_layer";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_UP    &kp HOME        &kp UP    &kp END          &kp ESC    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_DOWN  &kp LEFT        &kp DOWN  &kp RIGHT        &kp ENTER  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp TAB         &msc SCRL_LEFT  &none     &msc SCRL_RIGHT  &tog 2     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &mo 4           &trans    &trans           &trans     &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌────────────────┬────────────────┬──────┬────────────────┬───────┬─────┐
+//    │     │     │     │     │     │     │   │  &msc SCRL_up  │      home      │  up  │      end       │  esc  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────┼─────┤
+//    │     │     │     │     │     │     │   │ &msc SCRL_down │      left      │ down │      rght      │  ent  │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────┼─────┤
+//    │     │     │     │     │     │     │   │      tab       │ &msc SCRL_left │      │ &msc SCRL_rght │ tog 2 │     │
+//    └─────┼─────┼─────┼─────┴─────┴─────┘   └────────────────┴────────────────┴──────┼────────────────┼───────┼─────┘
+//          │     │     │                                                              │                │       │
+//          └─────┴─────┼─────┬─────┬─────┐   ┌────────────────┬────────────────┬──────┼────────────────┴───────┘
+//                      │     │     │     │   │                │      mo 4      │      │
+//                      └─────┴─────┼─────┤   ├────────────────┼────────────────┴──────┘
+//                                  │     │   │                │
+//                                  └─────┘   └────────────────┘
+  &trans   &trans   &trans   &trans   &trans   &trans       &msc SCRL_UP     &kp HOME         &kp UP     &kp END           &kp ESC     &trans
+  &trans   &trans   &trans   &trans   &trans   &trans       &msc SCRL_DOWN   &kp LEFT         &kp DOWN   &kp RIGHT         &kp ENTER   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans       &kp TAB          &msc SCRL_LEFT   &none      &msc SCRL_RIGHT   &tog 2      &trans
+           &trans   &trans                                                                               &trans            &trans
+                             &trans   &trans   &trans       &trans           &mo 4            &trans
+                                               &trans       &trans
             >;
         };
 
         nav_layer {
-            display-name = "nav_layer";
+            label = "nav_layer";
             bindings = <
-&trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &tog LNUM    &msc SCRL_UP    &kp HOME        &kp UP    &kp END          &kp PG_UP  &trans
-&trans  &kp LGUI        &kp LALT        &kp LCTRL     &kp LSHFT        &kp BSPC     &msc SCRL_DOWN  &kp LEFT        &kp DOWN  &kp RIGHT        &kp PG_DN  &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp CAPS     &none           &msc SCRL_LEFT  &none     &msc SCRL_RIGHT  &kp SPACE  &trans
-&trans  &trans          &kp DEL         &lt 5 SPACE   &trans           &trans       &trans          &lt 5 DEL       &lt 4 TAB &trans           &trans     &trans
+//    ┌─────┬────────────────┬────────────────┬──────────────┬────────────────┬──────────┐   ┌────────────────┬────────────────┬──────────┬────────────────┬──────┬─────┐
+//    │     │      left      │      down      │      up      │      rght      │ tog LNUM │   │  &msc SCRL_up  │      home      │    up    │      end       │ pgup │     │
+//    ├─────┼────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────────┼────────────────┼──────┼─────┤
+//    │     │      lgui      │      lalt      │     lctl     │      lsft      │   bspc   │   │ &msc SCRL_down │      left      │   down   │      rght      │ pgdn │     │
+//    ├─────┼────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────────┼────────────────┼──────┼─────┤
+//    │     │ &msc SCRL_left │ &msc SCRL_down │ &msc SCRL_up │ &msc SCRL_rght │   caps   │   │                │ &msc SCRL_left │          │ &msc SCRL_rght │ spc  │     │
+//    └─────┼────────────────┼────────────────┼──────────────┴────────────────┴──────────┘   └────────────────┴────────────────┴──────────┼────────────────┼──────┼─────┘
+//          │                │                │                                                                                           │                │      │
+//          └────────────────┴────────────────┼──────────────┬────────────────┬──────────┐   ┌────────────────┬────────────────┬──────────┼────────────────┴──────┘
+//                                            │   lt 5 spc   │                │   del    │   │                │    lt 5 del    │ lt 4 tab │
+//                                            └──────────────┴────────────────┼──────────┤   ├────────────────┼────────────────┴──────────┘
+//                                                                            │          │   │                │
+//                                                                            └──────────┘   └────────────────┘
+  &trans   &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &tog LNUM       &msc SCRL_UP     &kp HOME         &kp UP      &kp END           &kp PG_UP   &trans
+  &trans   &kp LGUI         &kp LALT         &kp LCTRL      &kp LSHFT         &kp BSPC        &msc SCRL_DOWN   &kp LEFT         &kp DOWN    &kp RIGHT         &kp PG_DN   &trans
+  &trans   &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &kp CAPS        &none            &msc SCRL_LEFT   &none       &msc SCRL_RIGHT   &kp SPACE   &trans
+           &trans           &trans                                                                                                          &trans            &trans
+                                             &lt 5 SPACE    &trans            &kp DEL         &trans           &lt 5 DEL        &lt 4 TAB
+                                                                              &trans          &trans
             >;
         };
 
         mouse_layer {
-            display-name = "mouse_layer";
+            label = "mouse_layer";
             bindings = <
-&trans  &none      &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans     &trans
-&trans  &mkp MCLK  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK  &trans
-&trans  &kp LGUI   &kp LALT        &kp LCTRL       &kp LSHFT        &trans  &trans  &kp RSHFT       &kp RCTRL       &kp RALT         &kp RGUI   &trans
-&trans  &trans     &trans          &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans     &trans
+//    ┌─────┬──────┬────────────────┬────────────────┬────────────────┬─────┐   ┌─────┬────────────────┬────────────────┬────────────────┬──────┬─────┐
+//    │     │      │      lclk      │  &msc SCRL_up  │      rclk      │     │   │     │      lclk      │  &mmv MOVE_up  │      rclk      │      │     │
+//    ├─────┼──────┼────────────────┼────────────────┼────────────────┼─────┤   ├─────┼────────────────┼────────────────┼────────────────┼──────┼─────┤
+//    │     │ mclk │ &msc SCRL_left │ &msc SCRL_down │ &msc SCRL_rght │     │   │     │ &mmv MOVE_left │ &mmv MOVE_down │ &mmv MOVE_rght │ mclk │     │
+//    ├─────┼──────┼────────────────┼────────────────┼────────────────┼─────┤   ├─────┼────────────────┼────────────────┼────────────────┼──────┼─────┤
+//    │     │ lgui │      lalt      │      lctl      │      lsft      │     │   │     │      rsft      │      rctl      │      ralt      │ rgui │     │
+//    └─────┼──────┼────────────────┼────────────────┴────────────────┴─────┘   └─────┴────────────────┴────────────────┼────────────────┼──────┼─────┘
+//          │      │                │                                                                                   │                │      │
+//          └──────┴────────────────┼────────────────┬────────────────┬─────┐   ┌─────┬────────────────┬────────────────┼────────────────┴──────┘
+//                                  │                │                │     │   │     │                │                │
+//                                  └────────────────┴────────────────┼─────┤   ├─────┼────────────────┴────────────────┘
+//                                                                    │     │   │     │
+//                                                                    └─────┘   └─────┘
+  &trans   &none       &mkp LCLK        &msc SCRL_UP     &mkp RCLK         &trans       &trans   &mkp LCLK        &mmv MOVE_UP     &mkp RCLK         &trans      &trans
+  &trans   &mkp MCLK   &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_RIGHT   &trans       &trans   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &mkp MCLK   &trans
+  &trans   &kp LGUI    &kp LALT         &kp LCTRL        &kp LSHFT         &trans       &trans   &kp RSHFT        &kp RCTRL        &kp RALT          &kp RGUI    &trans
+           &trans      &trans                                                                                                      &trans            &trans
+                                        &trans           &trans            &trans       &trans   &trans           &trans
+                                                                           &trans       &trans
             >;
         };
 
         func_layer {
-            display-name = "func_layer";
+            label = "func_layer";
             bindings = <
-&trans  &bootloader      &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &bt BT_SEL 0  &bt BT_SEL 1  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &out OUT_USB     &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &bt BT_SEL 2  &bt BT_SEL 3  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &kp PRINTSCREEN  &mt C_MUTE K_MUTE  &out OUT_BLE          &bt BT_SEL 4  &bt BT_CLR    &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
-&trans  &trans           &trans             &trans                &trans        &trans        &trans   &trans  &trans  &trans  &trans  &trans
+//    ┌─────┬──────────┬──────────────┬──────────┬──────────┬──────────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │   boot   │     volu     │   bri+   │ bt_sel 0 │ bt_sel 1 │   │ f12 │ f7  │ f8  │ f9  │     │     │
+//    ├─────┼──────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │ out_ usb │     vold     │   bri-   │ bt_sel 2 │ bt_sel 3 │   │ f11 │ f4  │ f5  │ f6  │     │     │
+//    ├─────┼──────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │   pscr   │ mt mute mute │ out_ ble │ bt_sel 4 │  bt_clr  │   │ f10 │ f1  │ f2  │ f3  │     │     │
+//    └─────┼──────────┼──────────────┼──────────┴──────────┴──────────┘   └─────┴─────┴─────┼─────┼─────┼─────┘
+//          │          │              │                                                      │     │     │
+//          └──────────┴──────────────┼──────────┬──────────┬──────────┐   ┌─────┬─────┬─────┼─────┴─────┘
+//                                    │          │          │          │   │     │     │     │
+//                                    └──────────┴──────────┼──────────┤   ├─────┼─────┴─────┘
+//                                                          │          │   │     │
+//                                                          └──────────┘   └─────┘
+  &trans   &bootloader       &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &bt BT_SEL 0   &bt BT_SEL 1       &kp F12   &kp F7   &kp F8   &kp F9   &trans   &trans
+  &trans   &out OUT_USB      &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &bt BT_SEL 2   &bt BT_SEL 3       &kp F11   &kp F4   &kp F5   &kp F6   &trans   &trans
+  &trans   &kp PRINTSCREEN   &mt C_MUTE K_MUTE   &out OUT_BLE           &bt BT_SEL 4   &bt BT_CLR         &kp F10   &kp F1   &kp F2   &kp F3   &trans   &trans
+           &trans            &trans                                                                                                   &trans   &trans
+                                                 &trans                 &trans         &trans             &trans    &trans   &trans
+                                                                                       &trans             &trans
             >;
         };
 
         left_num {
-            display-name = "left_num";
+            label = "left_num";
             bindings = <
-&trans  &kp EQUAL       &kp N7       &kp N8          &kp N9        &tog LNUM           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &hm LGUI MINUS  &hm LALT N4  &hm LCTRL N5    &hs LSHFT N6  &kp DOT             &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0          &kp N1       &kp N2          &kp N3        &kp COMMA           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans       &mt LSHFT TAB   &lt 7 ENTER   &trans              &trans  &trans  &trans  &trans  &trans  &trans
+//    ┌─────┬────────────┬────────────┬─────────────┬────────────┬──────────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │     =      │     7      │      8      │     9      │ tog LNUM │   │     │     │     │     │     │     │
+//    ├─────┼────────────┼────────────┼─────────────┼────────────┼──────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │ &hm lgui - │ &hm lalt 4 │ &hm lctl 5  │ &hs lsft 6 │    .     │   │     │     │     │     │     │     │
+//    ├─────┼────────────┼────────────┼─────────────┼────────────┼──────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     0      │     1      │      2      │     3      │    ,     │   │     │     │     │     │     │     │
+//    └─────┼────────────┼────────────┼─────────────┴────────────┴──────────┘   └─────┴─────┴─────┼─────┼─────┼─────┘
+//          │            │            │                                                           │     │     │
+//          └────────────┴────────────┼─────────────┬────────────┬──────────┐   ┌─────┬─────┬─────┼─────┴─────┘
+//                                    │ mt lsft tab │  lt 7 ent  │          │   │     │     │     │
+//                                    └─────────────┴────────────┼──────────┤   ├─────┼─────┴─────┘
+//                                                               │          │   │     │
+//                                                               └──────────┘   └─────┘
+  &trans   &kp EQUAL        &kp N7        &kp N8               &kp N9         &tog LNUM       &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &hm LGUI MINUS   &hm LALT N4   &hm LCTRL N5         &hs LSHFT N6   &kp DOT         &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &kp N0           &kp N1        &kp N2               &kp N3         &kp COMMA       &trans   &trans   &trans   &trans   &trans   &trans
+           &trans           &trans                                                                                       &trans   &trans
+                                          &mt LEFT_SHIFT TAB   &lt 7 ENTER    &trans          &trans   &trans   &trans
+                                                                              &trans          &trans
             >;
         };
 
         left_sym {
-            display-name = "left_sym";
+            label = "left_sym";
             bindings = <
-&trans  &kp ESC      &kp COLON             &kp LPAR  &kp RPAR  &kp BSPC   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE    &kp SQT               &kp LBKT  &kp RBKT  &kp UNDER  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp BSLH     &kp DOUBLE_QUOTES     &kp LT    &kp GT    &kp FSLH   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &mt LEFT_SHIFT SPACE  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────────────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │ esc │  :  │  (  │  )  │    bspc     │   │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  `  │  '  │  [  │  ]  │      _      │   │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────────────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  \  │  "  │  <  │  >  │      /      │   │     │     │     │     │     │     │
+//    └─────┼─────┼─────┼─────┴─────┴─────────────┘   └─────┴─────┴─────┼─────┼─────┼─────┘
+//          │     │     │                                               │     │     │
+//          └─────┴─────┼─────┬─────┬─────────────┐   ┌─────┬─────┬─────┼─────┴─────┘
+//                      │     │     │ mt lsft spc │   │     │     │     │
+//                      └─────┴─────┼─────────────┤   ├─────┼─────┴─────┘
+//                                  │             │   │     │
+//                                  └─────────────┘   └─────┘
+  &trans   &kp ESC     &kp COLON           &kp LPAR   &kp RPAR   &kp BSPC                   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &kp GRAVE   &kp SQT             &kp LBKT   &kp RBKT   &kp UNDER                  &trans   &trans   &trans   &trans   &trans   &trans
+  &trans   &kp BSLH    &kp DOUBLE_QUOTES   &kp LT     &kp GT     &kp FSLH                   &trans   &trans   &trans   &trans   &trans   &trans
+           &trans      &trans                                                                                          &trans   &trans
+                                           &trans     &trans     &mt LEFT_SHIFT SPACE       &trans   &trans   &trans
+                                                                 &trans                     &trans
             >;
         };
 
         reset {
-            display-name = "reset";
+            label = "reset";
             bindings = <
-&trans  &trans  &trans        &out OUT_USB  &out OUT_BLE  &bootloader   &bootloader  &out OUT_BLE  &out OUT_USB  &trans        &trans  &trans
-&trans  &trans  &trans        &trans        &trans        &sys_reset    &sys_reset   &trans        &trans        &trans        &trans  &trans
-&trans  &trans  &trans        &trans        &trans        &trans        &trans       &trans        &trans        &trans        &trans  &trans
-&trans  &trans  &out OUT_USB  &out OUT_BLE  &bootloader   &trans        &trans       &bootloader   &out OUT_BLE  &out OUT_USB  &trans  &trans  
+//    ┌─────┬─────┬─────┬──────────┬──────────┬────────────┐   ┌────────────┬──────────┬──────────┬─────┬─────┬─────┐
+//    │     │     │     │ out_ usb │ out_ ble │    boot    │   │    boot    │ out_ ble │ out_ usb │     │     │     │
+//    ├─────┼─────┼─────┼──────────┼──────────┼────────────┤   ├────────────┼──────────┼──────────┼─────┼─────┼─────┤
+//    │     │     │     │          │          │ &sys_reset │   │ &sys_reset │          │          │     │     │     │
+//    ├─────┼─────┼─────┼──────────┼──────────┼────────────┤   ├────────────┼──────────┼──────────┼─────┼─────┼─────┤
+//    │     │     │     │          │          │            │   │            │          │          │     │     │     │
+//    └─────┼─────┼─────┼──────────┴──────────┴────────────┘   └────────────┴──────────┴──────────┼─────┼─────┼─────┘
+//          │     │     │                                                                         │     │     │
+//          └─────┴─────┼──────────┬──────────┬────────────┐   ┌────────────┬──────────┬──────────┼─────┴─────┘
+//                      │ out_ ble │ out_ usb │    boot    │   │    boot    │ out_ usb │ out_ ble │
+//                      └──────────┴──────────┼────────────┤   ├────────────┼──────────┴──────────┘
+//                                            │            │   │            │
+//                                            └────────────┘   └────────────┘
+  &trans   &trans   &trans   &out OUT_USB   &out OUT_BLE   &bootloader       &bootloader   &out OUT_BLE   &out OUT_USB   &trans   &trans   &trans
+  &trans   &trans   &trans   &trans         &trans         &sys_reset        &sys_reset    &trans         &trans         &trans   &trans   &trans
+  &trans   &trans   &trans   &trans         &trans         &trans            &trans        &trans         &trans         &trans   &trans   &trans
+           &trans   &trans                                                                                               &trans   &trans
+                             &out OUT_BLE   &out OUT_USB   &bootloader       &bootloader   &out OUT_USB   &out OUT_BLE
+                                                           &trans            &trans
             >;
-    };
+        };
 
 #ifdef HAS_MOUSE_KEYS
     MouseKeys_layer {
       display-name = "MouseKeys";
       bindings = <
-// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-     U_TOG_TP_SET             U_TOG_TP_SET             &none                    &mmv MOVE_UP             &msc SCRL_UP             &none                         &none                    &msc SCRL_UP             &mmv MOVE_UP             &none                    U_TOG_TP_SET              U_TOG_TP_SET
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &trans                   &none                    &mmv MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_RIGHT          &none                         &mkp LCLK                     &mmv MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_RIGHT         &mkp RCLK                      &trans
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &trans                   &none                    &none                    &none                    &msc SCRL_DOWN           &none                         &mkp MCLK                   &kp BACKSPACE           &none                    &none                    &trans                    &trans
-// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┴────────────────────────┼────────────────────────╯
-      &trans                &trans                     &trans               &mkp MCLK                &mkp LCLK                &mkp RCLK                     &trans                 &trans              &trans               &trans                 &trans              &trans
-//                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
+//    ┌───────────────┬───────────────┬────────────────┬────────────────┬────────────────┬─────┐   ┌──────┬────────────────┬────────────────┬────────────────┬───────────────┬───────────────┐
+//    │ _U_TOG_TP_SET │ _U_TOG_TP_SET │                │  &mmv MOVE_up  │  &msc SCRL_up  │     │   │      │  &msc SCRL_up  │  &mmv MOVE_up  │                │ _U_TOG_TP_SET │ _U_TOG_TP_SET │
+//    ├───────────────┼───────────────┼────────────────┼────────────────┼────────────────┼─────┤   ├──────┼────────────────┼────────────────┼────────────────┼───────────────┼───────────────┤
+//    │               │               │ &mmv MOVE_left │ &mmv MOVE_down │ &mmv MOVE_rght │     │   │ lclk │ &mmv MOVE_left │ &mmv MOVE_down │ &mmv MOVE_rght │     rclk      │               │
+//    ├───────────────┼───────────────┼────────────────┼────────────────┼────────────────┼─────┤   ├──────┼────────────────┼────────────────┼────────────────┼───────────────┼───────────────┤
+//    │               │               │                │                │ &msc SCRL_down │     │   │ mclk │      bspc      │                │                │               │               │
+//    └───────────────┼───────────────┼────────────────┼────────────────┴────────────────┴─────┘   └──────┴────────────────┴────────────────┼────────────────┼───────────────┼───────────────┘
+//                    │               │                │                                                                                    │                │     mclk      │
+//                    └───────────────┴────────────────┼────────────────┬────────────────┬─────┐   ┌──────┬────────────────┬────────────────┼────────────────┴───────────────┘
+//                                                     │      lclk      │      rclk      │     │   │      │                │                │
+//                                                     └────────────────┴────────────────┼─────┤   ├──────┼────────────────┴────────────────┘
+//                                                                                       │     │   │      │
+//                                                                                       └─────┘   └──────┘
+  _U_TOG_TP_SET   _U_TOG_TP_SET   &none            &mmv MOVE_UP     &msc SCRL_UP      &none        &none       &msc SCRL_UP     &mmv MOVE_UP     &none             _U_TOG_TP_SET   _U_TOG_TP_SET
+  &trans          &none           &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &none        &mkp LCLK   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &mkp RCLK       &trans
+  &trans          &none           &none            &none            &msc SCRL_DOWN    &none        &mkp MCLK   &kp BACKSPACE    &none            &none             &trans          &trans
+                  &trans          &trans                                                                                                         &trans            &mkp MCLK
+                                                   &mkp LCLK        &mkp RCLK         &trans       &trans      &trans           &trans
+                                                                                      &trans       &trans
       >;
     };
 
@@ -298,32 +455,51 @@
     MouseTP_layer {
       display-name = "TP";
       bindings = <
-// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-     U_TOG_TP_SET             U_TOG_TP_SET             &trans                   &trans                   &msc SCRL_UP             &trans                        &trans                   &trans                   &trans                   &trans                   U_TOG_TP_SET              U_TOG_TP_SET
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &trans                   &trans                   &trans                   &trans                   &trans                   &trans                        &trans                   &trans                   &trans                   &trans                   &trans                    &trans
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     &trans                   &trans                   &trans                   &trans                   &msc SCRL_DOWN           &trans                        &trans                   &trans                   &trans                   &trans                   &trans                    &trans
-// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┴────────────────────────┼────────────────────────╯
-      &trans                   &trans                  &trans             &mkp MCLK                &mkp LCLK                &mkp RCLK                     &mkp MCLK                &mkp LCLK                &mkp RCLK            &trans           &trans           &trans
-//                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
+//    ┌───────────────┬───────────────┬─────┬──────┬────────────────┬──────┐   ┌──────┬──────┬─────┬─────┬───────────────┬───────────────┐
+//    │ _U_TOG_TP_SET │ _U_TOG_TP_SET │     │      │  &msc SCRL_up  │      │   │      │      │     │     │ _U_TOG_TP_SET │ _U_TOG_TP_SET │
+//    ├───────────────┼───────────────┼─────┼──────┼────────────────┼──────┤   ├──────┼──────┼─────┼─────┼───────────────┼───────────────┤
+//    │               │               │     │      │                │      │   │      │      │     │     │               │               │
+//    ├───────────────┼───────────────┼─────┼──────┼────────────────┼──────┤   ├──────┼──────┼─────┼─────┼───────────────┼───────────────┤
+//    │               │               │     │      │ &msc SCRL_down │      │   │      │      │     │     │               │               │
+//    └───────────────┼───────────────┼─────┼──────┴────────────────┴──────┘   └──────┴──────┴─────┼─────┼───────────────┼───────────────┘
+//                    │               │     │                                                      │     │     mclk      │
+//                    └───────────────┴─────┼──────┬────────────────┬──────┐   ┌──────┬──────┬─────┼─────┴───────────────┘
+//                                          │ lclk │      rclk      │ mclk │   │ lclk │ rclk │     │
+//                                          └──────┴────────────────┼──────┤   ├──────┼──────┴─────┘
+//                                                                  │      │   │      │
+//                                                                  └──────┘   └──────┘
+  _U_TOG_TP_SET   _U_TOG_TP_SET   &trans   &trans      &msc SCRL_UP     &trans          &trans      &trans      &trans   &trans   _U_TOG_TP_SET   _U_TOG_TP_SET
+  &trans          &trans          &trans   &trans      &trans           &trans          &trans      &trans      &trans   &trans   &trans          &trans
+  &trans          &trans          &trans   &trans      &msc SCRL_DOWN   &trans          &trans      &trans      &trans   &trans   &trans          &trans
+                  &trans          &trans                                                                                 &trans   &mkp MCLK
+                                           &mkp LCLK   &mkp RCLK        &mkp MCLK       &mkp LCLK   &mkp RCLK   &trans
+                                                                        &trans          &trans
       >;
     };
 
     // You can find the defines for the actual key press behaviors in `include/mouse_tp.dtsi`.
     MouseSettings_layer {
       display-name = "TP Set";
-      
       bindings = <
-// ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-     U_TOG_TP_SET             U_TOG_TP_SET             &none                    U_MSS_TP_S_D             U_MSS_TP_S_I             U_MSS_TP_PT_I                 U_MSS_TP_PT_I            U_MSS_TP_S_D             U_MSS_TP_S_I             &none                    U_TOG_TP_SET              U_TOG_TP_SET
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     U_MSS_RESET              U_MSS_RESET              &none                    U_MSS_TP_NI_D            U_MSS_TP_NI_I            U_MSS_TP_PT_D                 U_MSS_TP_PT_D            U_MSS_TP_NI_D            U_MSS_TP_NI_I            &none                    U_MSS_RESET               U_MSS_RESET
-// ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
-     U_MSS_LOG                U_MSS_LOG                &none                    U_MSS_TP_V6_D            U_MSS_TP_V6_I            &none                         &none                    U_MSS_TP_V6_D            U_MSS_TP_V6_I            &none                    U_MSS_LOG                 U_MSS_LOG
-// ╰────────────────────────┴────────────────────────┴────────────────────────┴────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┴────────────────────────┼────────────────────────╯
-       &trans                &trans                     &trans                         &trans                   &mkp LCLK                &mkp RCLK                     &none                    &mkp LCLK                &mkp RCLK        &trans       &trans       &trans
-//                                                                            ╰────────────────────────┴────────────────────────┴────────────────────────╯    ╰────────────────────────┴────────────────────────┴────────────────────────╯
+//    ┌───────────────┬───────────────┬─────┬────────────────┬────────────────┬────────────────┐   ┌────────────────┬────────────────┬─────────────────┬─────┬───────────────┬───────────────┐
+//    │ _U_TOG_TP_SET │ _U_TOG_TP_SET │     │ _U_MSS_TP_S_D  │ _U_MSS_TP_S_I  │ _U_MSS_TP_PT_I │   │ _U_MSS_TP_PT_I │ _U_MSS_TP_S_D  │  _U_MSS_TP_S_I  │     │ _U_TOG_TP_SET │ _U_TOG_TP_SET │
+//    ├───────────────┼───────────────┼─────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼─────────────────┼─────┼───────────────┼───────────────┤
+//    │ _U_MSS_RESET  │ _U_MSS_RESET  │     │ _U_MSS_TP_NI_D │ _U_MSS_TP_NI_I │ _U_MSS_TP_PT_D │   │ _U_MSS_TP_PT_D │ _U_MSS_TP_NI_D │ _U_MSS_TP_NI_I  │     │ _U_MSS_RESET  │ _U_MSS_RESET  │
+//    ├───────────────┼───────────────┼─────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼─────────────────┼─────┼───────────────┼───────────────┤
+//    │  _U_MSS_LOG   │  _U_MSS_LOG   │     │ _U_MSS_TP_V6_D │ _U_MSS_TP_V6_I │                │   │                │ _U_MSS_TP_V6_D │ _U_MSS_TP_V6_I  │     │  _U_MSS_LOG   │  _U_MSS_LOG   │
+//    └───────────────┼───────────────┼─────┼────────────────┴────────────────┴────────────────┘   └────────────────┴────────────────┴─────────────────┼─────┼───────────────┼───────────────┘
+//                    │               │     │                                                                                                          │     │               │
+//                    └───────────────┴─────┼────────────────┬────────────────┬────────────────┐   ┌────────────────┬────────────────┬─────────────────┼─────┴───────────────┘
+//                                          │      lclk      │      rclk      │                │   │      lclk      │      rclk      │                 │
+//                                          └────────────────┴────────────────┼────────────────┤   ├────────────────┼────────────────┴─────────────────┘
+//                                                                            │                │   │                │
+//                                                                            └────────────────┘   └────────────────┘
+  _U_TOG_TP_SET   _U_TOG_TP_SET   &none    _U_MSS_TP_S_D    _U_MSS_TP_S_I    _U_MSS_TP_PT_I       _U_MSS_TP_PT_I   _U_MSS_TP_S_D    _U_MSS_TP_S_I     &none    _U_TOG_TP_SET   _U_TOG_TP_SET
+  _U_MSS_RESET    _U_MSS_RESET    &none    _U_MSS_TP_NI_D   _U_MSS_TP_NI_I   _U_MSS_TP_PT_D       _U_MSS_TP_PT_D   _U_MSS_TP_NI_D   _U_MSS_TP_NI_I    &none    _U_MSS_RESET    _U_MSS_RESET
+  _U_MSS_LOG      _U_MSS_LOG      &none    _U_MSS_TP_V6_D   _U_MSS_TP_V6_I   &none                &none            _U_MSS_TP_V6_D   _U_MSS_TP_V6_I    &none    _U_MSS_LOG      _U_MSS_LOG
+                  &trans          &trans                                                                                                              &trans   &trans
+                                           &mkp LCLK        &mkp RCLK        &none                &mkp LCLK        &mkp RCLK        &trans
+                                                                             &trans               &trans
       >;
     };
 

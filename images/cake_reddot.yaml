@@ -38,16 +38,16 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - (
   - )
-  - {t: '$$mdi:keyboard-space$$', h: sym_layer}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:keyboard-return$$', h: nav_layer}
-  - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
-  - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:backspace$$', h: sym_layer}
-  - $$mdi:keyboard-space$$
-  - $$mdi:apple-keyboard-shift$$
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
+  - {t: ESCAPE, h: LEFT COMMAND}
+  - {t: '$$mdi:keyboard-return$$', h: nav_layer}
+  - {t: '$$mdi:keyboard-space$$', h: sym_layer}
+  - RIGHT SHIFT
+  - {t: '$$mdi:backspace$$', h: sym_layer}
+  - $$mdi:keyboard-space$$
+  - {t: '1', h: Left click, s: '$$mdi:mouse$$'}
+  - {t: '2', h: Right click, s: '$$mdi:mouse$$'}
   sym_layer:
   - {t: ▽, type: trans}
   - '!'
@@ -87,14 +87,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', h: func_layer}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:keyboard-space$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   rnav_layer:
@@ -141,8 +141,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - mouse_layer
   - {t: ▽, type: trans}
+  - mouse_layer
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,14 +185,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-space$$', h: func_layer}
   - {type: held}
-  - {t: ▽, type: trans}
+  - $$mdi:backspace-reverse-outline$$
   - {t: ▽, type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', h: func_layer}
   - {t: '$$mdi:keyboard-tab$$', h: mouse_layer}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   mouse_layer:
@@ -239,8 +239,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -283,11 +283,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -333,9 +333,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-return$$', h: left_sym}
   - {t: ▽, type: trans}
+  - {t: '$$mdi:keyboard-tab$$', h: LEFT SHIFT}
+  - {t: '$$mdi:keyboard-return$$', h: left_sym}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -381,11 +381,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-space$$', h: LEFT SHIFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:keyboard-space$$', h: LEFT SHIFT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -430,14 +430,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - OUT USB
-  - OUT BLE
-  - $$mdi:progress-download$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:progress-download$$
   - OUT BLE
   - OUT USB
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
+  - OUT USB
+  - OUT BLE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MouseKeys:
