@@ -5,12 +5,13 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "sweepsq-layouts.dtsi"
 
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
     default_transform: keymap_transform_0 {

@@ -168,19 +168,19 @@
         func_layer {
             display-name = "func_layer";
             bindings = <
-//    ┌──────────┬──────────────┬──────────┬──────────┬──────────┐   ┌─────┬─────┬─────┬────┬─────┐
-//    │   boot   │     volu     │   bri+   │ bt_sel 0 │ bt_sel 1 │   │ f12 │ f7  │ f8  │ f9 │     │
-//    ├──────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┼─────┤
-//    │ out_ usb │     vold     │   bri-   │ bt_sel 2 │ bt_sel 3 │   │ f11 │ f4  │ f5  │ f6 │     │
-//    ├──────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┼─────┤
-//    │   pscr   │ mt mute mute │ out_ ble │ bt_sel 4 │  bt_clr  │   │ f10 │ f1  │ f2  │ f3 │     │
-//    └──────────┴──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┴─────┘
-//                              │          │          │          │   │     │     │     │
-//                              └──────────┴──────────┴──────────┘   └─────┴─────┴─────┘
-  &bootloader       &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &bt BT_SEL 0   &bt BT_SEL 1       &kp F12   &kp F7   &kp F8   &kp F9   &trans
-  &out OUT_USB      &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &bt BT_SEL 2   &bt BT_SEL 3       &kp F11   &kp F4   &kp F5   &kp F6   &trans
-  &kp PRINTSCREEN   &mt C_MUTE K_MUTE   &out OUT_BLE           &bt BT_SEL 4   &bt BT_CLR         &kp F10   &kp F1   &kp F2   &kp F3   &trans
-                                        &trans                 &trans         &trans             &trans    &trans   &trans
+//    ┌────────────────┬──────────────┬──────────┬──────────┬──────────┐   ┌─────┬─────┬─────┬────┬─────┐
+//    │      boot      │     volu     │   bri+   │ bt_sel 0 │ bt_sel 1 │   │ f12 │ f7  │ f8  │ f9 │     │
+//    ├────────────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┼─────┤
+//    │    out_ usb    │     vold     │   bri-   │ bt_sel 2 │ bt_sel 3 │   │ f11 │ f4  │ f5  │ f6 │     │
+//    ├────────────────┼──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┼─────┤
+//    │ &studio_unlock │ mt mute mute │ out_ ble │ bt_sel 4 │  bt_clr  │   │ f10 │ f1  │ f2  │ f3 │     │
+//    └────────────────┴──────────────┼──────────┼──────────┼──────────┤   ├─────┼─────┼─────┼────┴─────┘
+//                                    │          │          │          │   │     │     │     │
+//                                    └──────────┴──────────┴──────────┘   └─────┴─────┴─────┘
+  &bootloader      &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &bt BT_SEL 0   &bt BT_SEL 1       &kp F12   &kp F7   &kp F8   &kp F9   &trans
+  &out OUT_USB     &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &bt BT_SEL 2   &bt BT_SEL 3       &kp F11   &kp F4   &kp F5   &kp F6   &trans
+  &studio_unlock   &mt C_MUTE K_MUTE   &out OUT_BLE           &bt BT_SEL 4   &bt BT_CLR         &kp F10   &kp F1   &kp F2   &kp F3   &trans
+                                       &trans                 &trans         &trans             &trans    &trans   &trans
             >;
         };
 

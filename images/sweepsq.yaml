@@ -168,7 +168,7 @@ layers:
   - F5
   - F6
   - {t: ▽, type: trans}
-  - PrtScr
+  - '&studio_unlock'
   - {t: MUTE, h: '$$mdi:volume-off$$'}
   - OUT BLE
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}

@@ -1,0 +1,8 @@
+#include <physical_layouts.dtsi>
+#include <layouts/foostan/corne/5column.dtsi>
+
+
+&foostan_corne_5col_layout {
+    transform = <&default_transform>;
+    kscan = <&kscan0>;
+};

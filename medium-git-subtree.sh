@@ -5,8 +5,10 @@
 # remote_repo="ezxzeng/zmk-bgkeeb"
 # remote_branch="main"
 shield_name="sweepsq"
-remote_repo="sadekbaroudi/zmk-sweepsq"
-remote_branch="master"
+remote_repo="ezxzeng/sweepsq-zmk"
+remote_branch="main"
+
+PREFIX="boards/shields/${shield_name}"
 
 git remote -v | grep -w ${shield_name} || git remote add ${shield_name} git@github.com:${remote_repo}.git
 SOURCE_BRANCH="${shield_name}-source"
@@ -23,10 +25,10 @@ echo "${shield_name} latest commit: ${LATEST_COMMIT}"
 echo
 
 # checkout source repo
-git checkout -b ${SOURCE_BRANCH} ${shield_name}/${remote_branch}
+git checkout -B ${SOURCE_BRANCH} ${shield_name}/${remote_branch}
 
 # create new staging branch from all the commits impacting "/my-chart" from source repo
-git subtree split -P config/boards/shields/${shield_name} -b ${STAGING_BRANCH}
+git subtree split -P boards/shields/${shield_name} -b ${STAGING_BRANCH}
 
 # echo Hi. >> config/boards/shields/${shield_name}/test.txt
 # git add config/boards/shields/${shield_name}/test.txt
@@ -41,7 +43,14 @@ git checkout main
 echo
 echo "Add in changes"
 echo -----------------------------------------
-git subtree add -P config/boards/shields/${shield_name} ${STAGING_BRANCH} --message "Update ${shield_name} from https://github.com/${remote_repo}/commit/${LATEST_COMMIT}"
+MSG="Update ${shield_name} from https://github.com/${remote_repo}/commit/${LATEST_COMMIT}"
+if [ -d "${PREFIX}" ]; then
+  # Prefix already exists → update existing subtree
+  git subtree merge -P "${PREFIX}" "${STAGING_BRANCH}" --message "${MSG}" 
+else
+  # Prefix does not exist yet → initial add
+  git subtree add -P "${PREFIX}" "${STAGING_BRANCH}" --message "${MSG}" 
+fi
 
 # clean up
 echo

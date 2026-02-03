@@ -6,6 +6,7 @@ url: https://github.com/sadekbaroudi/sweep36
 requires: [pro_micro]
 features:
   - keys
+  - studio
 siblings:
   - sweepsq_left
   - sweepsq_right
