@@ -1,0 +1,18 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include "cosmos.dtsi"
+#import "cosmos-layouts.dtsi"
+
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &cosmos_5x3_4_layout;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
