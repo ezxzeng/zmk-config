@@ -12,14 +12,9 @@
 #     shield: reviung41
 #
 ---
-board: ["nice_nano"]
-shield: [
-  "settings_reset",
-  #"bgkeeb_left", "bgkeeb_right",
-  # "cradio_left", "cradio_right",
-  # "cake_reddot_left", "cake_reddot_right",
-]
 include:
+  - board: nice_nano
+    shield: settings_reset
   - board: nice_nano
     shield: hector36_left
     snippet: studio-rpc-usb-uart
