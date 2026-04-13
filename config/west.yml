@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: ezxzeng
+      url-base: https://github.com/ezxzeng
 
   projects:
 
@@ -24,7 +26,7 @@ manifest:
     # Not compatible with the PS/2 mouse & TP driver module.
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: main
       import: app/west.yml
 
     # infused-kim's zmk fork with mouse PR, which might be a bit outdated, but
@@ -70,9 +72,13 @@ manifest:
     #   remote: urob
     #   revision: main
 
-    # - name: zmk-dongle-display
-    #   remote: englmaxi
-    #   revision: v0.3 # use 'v0.3' instead of 'main' if you use have pinned zmk to 'v0.3' or below
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: main # use 'v0.3' instead of 'main' if you use have pinned zmk to 'v0.3' or below
+      
+    - name: zmk-keyboards-hector36
+      remote: ezxzeng
+      revision: main
 
   self:
     path: config
