@@ -116,13 +116,13 @@
 //    ├────────────┼────────────┼────────────┼────────────┼─────────────┤   ├─────┼────────────┼────────────┼────────────┼────────────┤
 //    │ &hm lgui ` │ &hm lalt ' │ &hm lctl [ │ &hs lsft ] │      _      │   │  -  │ &hs rsft 4 │ &hm rctl 5 │ &hm ralt 6 │ &hm rgui ; │
 //    ├────────────┼────────────┼────────────┼────────────┼─────────────┤   ├─────┼────────────┼────────────┼────────────┼────────────┤
-//    │     |      │     "      │     <      │     >      │      /      │   │  0  │     1      │     2      │     3      │   tog 2    │
+//    │     |      │     "      │     <      │     >      │      /      │   │  0  │     1      │     2      │     3      │  tog RNAV  │
 //    └────────────┴────────────┼────────────┼────────────┼─────────────┤   ├─────┼────────────┼────────────┼────────────┴────────────┘
 //                              │            │            │ lt FUNC ent │   │     │    spc     │            │
 //                              └────────────┴────────────┴─────────────┘   └─────┴────────────┴────────────┘
   &kp EXCL         &kp AT              &kp LPAR         &kp RPAR          &kp BACKSLASH        &kp EQUAL   &kp N7         &kp N8         &kp N9        &kp BSPC
   &hm LGUI GRAVE   &hm LALT APOS       &hm LCTRL LBKT   &hs LSHIFT RBKT   &kp UNDER            &kp MINUS   &hs RSHFT N4   &hm RCTRL N5   &hm RALT N6   &hm RGUI SEMI
-  &kp PIPE         &kp DOUBLE_QUOTES   &kp LT           &kp GT            &kp SLASH            &kp N0      &kp N1         &kp N2         &kp N3        &tog 2
+  &kp PIPE         &kp DOUBLE_QUOTES   &kp LT           &kp GT            &kp SLASH            &kp N0      &kp N1         &kp N2         &kp N3        &tog RNAV
                                        &trans           &trans            &lt FUNC ENTER       &trans      &kp SPACE      &trans
             >;
         };
@@ -187,24 +187,24 @@
         rnav {
             display-name = "rnav";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┐   ┌────────────────┬────────────────┬──────┬────────────────┬───────┐
-//    │     │     │     │     │     │   │  &msc SCRL_up  │      home      │  up  │      end       │  esc  │
-//    ├─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────┤
-//    │     │     │     │     │     │   │ &msc SCRL_down │      left      │ down │      rght      │  ent  │
-//    ├─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────┤
-//    │     │     │     │     │     │   │      tab       │ &msc SCRL_left │      │ &msc SCRL_rght │ tog 2 │
-//    └─────┴─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼──────┼────────────────┴───────┘
-//                │     │     │     │   │    mo MOUSE    │                │      │
-//                └─────┴─────┴─────┘   └────────────────┴────────────────┴──────┘
-  &trans   &trans   &trans   &trans   &trans       &msc SCRL_UP     &kp HOME         &kp UP     &kp END           &kp ESC
-  &trans   &trans   &trans   &trans   &trans       &msc SCRL_DOWN   &kp LEFT         &kp DOWN   &kp RIGHT         &kp ENTER
-  &trans   &trans   &trans   &trans   &trans       &kp TAB          &msc SCRL_LEFT   &none      &msc SCRL_RIGHT   &tog 2
-                    &trans   &trans   &trans       &mo MOUSE        &trans           &trans
+//    ┌────────────────┬────────────────┬──────────────┬────────────────┬──────────┐   ┌────────────────┬────────────────┬──────┬────────────────┬───────────┐
+//    │      left      │      down      │      up      │      rght      │ tog LNUM │   │  &msc SCRL_up  │      home      │  up  │      end       │    esc    │
+//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────────┤
+//    │      lgui      │      lalt      │     lctl     │      lsft      │   bspc   │   │ &msc SCRL_down │      left      │ down │      rght      │    ent    │
+//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────────┤
+//    │ &msc SCRL_left │ &msc SCRL_down │ &msc SCRL_up │ &msc SCRL_rght │   caps   │   │      tab       │ &msc SCRL_left │      │ &msc SCRL_rght │ tog RNAV  │
+//    └────────────────┴────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┴───────────┘
+//                                      │     del      │  lt FUNC spc   │          │   │    mo MOUSE    │  lt RCTRL tab  │      │
+//                                      └──────────────┴────────────────┴──────────┘   └────────────────┴────────────────┴──────┘
+  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &tog LNUM       &msc SCRL_UP     &kp HOME         &kp UP     &kp END           &kp ESC
+  &kp LGUI         &kp LALT         &kp LCTRL      &kp LSHFT         &kp BSPC        &msc SCRL_DOWN   &kp LEFT         &kp DOWN   &kp RIGHT         &kp ENTER
+  &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &kp CAPS        &kp TAB          &msc SCRL_LEFT   &none      &msc SCRL_RIGHT   &tog RNAV
+                                    &kp DEL        &lt FUNC SPACE    &trans          &mo MOUSE        &lt RCTRL TAB    &trans
             >;
         };
 
         left_num {
-            display-name = "left_num";
+            display-name = "l_num";
             bindings = <
 //    ┌────────────┬────────────┬────────────┬─────────────┬───────────────┐   ┌─────┬─────┬─────┬─────┬─────┐
 //    │     =      │     7      │     8      │      9      │   tog LNUM    │   │     │     │     │     │     │
@@ -223,7 +223,7 @@
         };
 
         left_sym {
-            display-name = "left_sym";
+            display-name = "l_sym";
             bindings = <
 //    ┌─────┬───┬─────────────┬─────┬──────┐   ┌─────┬─────┬─────┬─────┬─────┐
 //    │ esc │ : │      (      │  )  │ bspc │   │     │     │     │     │     │
