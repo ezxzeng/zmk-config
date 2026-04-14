@@ -90,7 +90,7 @@
         compatible = "zmk,keymap";
 
         default {
-            display-name = "default";
+            display-name = "0";
             bindings = <
 //    ┌──────────────┬────────────┬────────────┬─────────────┬────────────┐   ┌─────────────────┬────────────┬────────────┬────────────┬──────────────┐
 //    │ &rst rsftT Q │     W      │     E      │      R      │     T      │   │        Y        │     U      │     I      │     O      │ &rst rsftT P │
