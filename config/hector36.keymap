@@ -89,8 +89,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "default_layer";
+        default {
+            display-name = "default";
             bindings = <
 //    ┌──────────────┬────────────┬────────────┬─────────────┬────────────┐   ┌─────────────────┬────────────┬────────────┬────────────┬──────────────┐
 //    │ &rst rsftT Q │     W      │     E      │      R      │     T      │   │        Y        │     U      │     I      │     O      │ &rst rsftT P │
@@ -108,8 +108,8 @@
             >;
         };
 
-        sym_layer {
-            display-name = "sym_layer";
+        sym {
+            display-name = "sym";
             bindings = <
 //    ┌────────────┬────────────┬────────────┬────────────┬─────────────┐   ┌─────┬────────────┬────────────┬────────────┬────────────┐
 //    │     !      │     @      │     (      │     )      │      \      │   │  =  │     7      │     8      │     9      │    bspc    │
@@ -127,8 +127,8 @@
             >;
         };
 
-        nav_layer {
-            display-name = "nav_layer";
+        nav {
+            display-name = "nav";
             bindings = <
 //    ┌────────────────┬────────────────┬──────────────┬────────────────┬──────────┐   ┌────────────────┬────────────────┬──────┬────────────────┬──────┐
 //    │      left      │      down      │      up      │      rght      │ tog LNUM │   │  &msc SCRL_up  │      home      │  up  │      end       │ pgup │
@@ -146,8 +146,8 @@
             >;
         };
 
-        mouse_layer {
-            display-name = "mouse_layer";
+        mouse {
+            display-name = "mouse";
             bindings = <
 //    ┌──────┬────────────────┬────────────────┬────────────────┬─────┐   ┌─────┬────────────────┬────────────────┬────────────────┬──────┐
 //    │      │      lclk      │  &msc SCRL_up  │      rclk      │     │   │     │      lclk      │  &mmv MOVE_up  │      rclk      │      │
@@ -165,8 +165,8 @@
             >;
         };
 
-        func_layer {
-            display-name = "func_layer";
+        func {
+            display-name = "func";
             bindings = <
 //    ┌────────────────┬──────────────┬──────────┬──────────┬──────────┐   ┌─────┬─────┬─────┬────┬─────┐
 //    │      boot      │     volu     │   bri+   │ bt_sel 0 │ bt_sel 1 │   │ f12 │ f7  │ f8  │ f9 │     │
@@ -184,8 +184,8 @@
             >;
         };
 
-        rnav_layer {
-            display-name = "rnav_layer";
+        rnav {
+            display-name = "rnav";
             bindings = <
 //    ┌─────┬─────┬─────┬─────┬─────┐   ┌────────────────┬────────────────┬──────┬────────────────┬───────┐
 //    │     │     │     │     │     │   │  &msc SCRL_up  │      home      │  up  │      end       │  esc  │
