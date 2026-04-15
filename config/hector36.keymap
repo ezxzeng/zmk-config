@@ -149,19 +149,19 @@
         rnav {
             display-name = "rnav";
             bindings = <
-//    ┌────────────────┬────────────────┬──────────────┬────────────────┬──────────┐   ┌────────────────┬────────────────┬──────┬────────────────┬───────────┐
-//    │      left      │      down      │      up      │      rght      │          │   │  &msc SCRL_up  │      home      │  up  │      end       │    esc    │
-//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────────┤
-//    │      lgui      │      lalt      │     lctl     │      lsft      │   bspc   │   │ &msc SCRL_down │      left      │ down │      rght      │    ent    │
-//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┼───────────┤
-//    │ &msc SCRL_left │ &msc SCRL_down │ &msc SCRL_up │ &msc SCRL_rght │   caps   │   │      tab       │ &msc SCRL_left │      │ &msc SCRL_rght │ tog RNAV  │
-//    └────────────────┴────────────────┼──────────────┼────────────────┼──────────┤   ├────────────────┼────────────────┼──────┼────────────────┴───────────┘
-//                                      │     del      │  lt FUNC spc   │          │   │    mo MOUSE    │  mt RCTRL tab  │      │
-//                                      └──────────────┴────────────────┴──────────┘   └────────────────┴────────────────┴──────┘
-  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &trans          &msc SCRL_UP     &kp HOME         &kp UP     &kp END           &kp ESC
-  &kp LGUI         &kp LALT         &kp LCTRL      &kp LSHFT         &kp BSPC        &msc SCRL_DOWN   &kp LEFT         &kp DOWN   &kp RIGHT         &kp ENTER
-  &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &kp CAPS        &kp TAB          &msc SCRL_LEFT   &none      &msc SCRL_RIGHT   &tog RNAV
-                                    &kp DEL        &lt FUNC SPACE    &trans          &mo MOUSE        &mt RCTRL TAB    &trans
+//    ┌────────────────┬────────────────┬──────────────┬────────────────┬──────┐   ┌────────────────┬────────────────┬──────┬────────────────┬──────────┐
+//    │      left      │      down      │      up      │      rght      │      │   │  &msc SCRL_up  │      home      │  up  │      end       │   esc    │
+//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────┤   ├────────────────┼────────────────┼──────┼────────────────┼──────────┤
+//    │      lgui      │      lalt      │     lctl     │      lsft      │ bspc │   │ &msc SCRL_down │      left      │ down │      rght      │   ent    │
+//    ├────────────────┼────────────────┼──────────────┼────────────────┼──────┤   ├────────────────┼────────────────┼──────┼────────────────┼──────────┤
+//    │ &msc SCRL_left │ &msc SCRL_down │ &msc SCRL_up │ &msc SCRL_rght │ caps │   │      tab       │ &msc SCRL_left │      │ &msc SCRL_rght │ tog RNAV │
+//    └────────────────┴────────────────┼──────────────┼────────────────┼──────┤   ├────────────────┼────────────────┼──────┼────────────────┴──────────┘
+//                                      │     del      │  lt FUNC spc   │      │   │    mo MOUSE    │  mt rctl tab   │      │
+//                                      └──────────────┴────────────────┴──────┘   └────────────────┴────────────────┴──────┘
+  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &trans         &msc SCRL_UP     &kp HOME         &kp UP     &kp END           &kp ESC
+  &kp LGUI         &kp LALT         &kp LCTRL      &kp LSHFT         &kp BSPC       &msc SCRL_DOWN   &kp LEFT         &kp DOWN   &kp RIGHT         &kp ENTER
+  &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &kp CAPS       &kp TAB          &msc SCRL_LEFT   &none      &msc SCRL_RIGHT   &tog RNAV
+                                    &kp DEL        &lt FUNC SPACE    &trans         &mo MOUSE        &mt RCTRL TAB    &trans
             >;
         };
 
