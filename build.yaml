@@ -13,15 +13,15 @@
 #
 ---
 include:
-  - board: nice_nano//zmk # comment this if no dongle
-    shield: hector36_dongle dongle_display # comment this if no dongle
-    # cmake-args: -DCONFIG_ZMK_STUDIO=y # comment this if no dongle or no zmk studio
+  # - board: nice_nano//zmk # comment this if no dongle
+  #   shield: hector36_dongle dongle_display # comment this if no dongle
+  #   # cmake-args: -DCONFIG_ZMK_STUDIO=y # comment this if no dongle or no zmk studio
   - board: nice_nano//zmk
     shield: settings_reset
   - board: nice_nano//zmk
     shield: hector36_left
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n # comment this if no dongle
-    # snippet: studio-rpc-usb-uart # comment this if using dongle
+    # cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n # comment this if no dongle
+    snippet: studio-rpc-usb-uart # comment this if using dongle
     # cmake-args: -DCONFIG_ZMK_STUDIO=y # comment this if using dongle or no zmk studio
   - board: nice_nano//zmk
     shield: hector36_right
