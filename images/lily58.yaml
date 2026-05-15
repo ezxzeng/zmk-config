@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: lily58}
+layout: {qmk_keyboard: lily58_rotated}
 layers:
   default:
   - $$mdi:keyboard-esc$$

@@ -1,4 +1,3 @@
-layout: {zmk_keyboard: bgkeeb}
 layers:
   default_layer:
   - {t: Q, h: reset}

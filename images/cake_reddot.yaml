@@ -1,4 +1,3 @@
-layout: {zmk_keyboard: cake_reddot}
 layers:
   default_layer:
   - $$mdi:keyboard-esc$$
