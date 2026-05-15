@@ -15,7 +15,7 @@
 include:
   - board: nice_nano//zmk # comment this if no dongle
     shield: hector36_dongle dongle_display # comment this if no dongle
-    cmake-args: -DCONFIG_ZMK_STUDIO=y # comment this if no dongle or no zmk studio
+    # cmake-args: -DCONFIG_ZMK_STUDIO=y # comment this if no dongle or no zmk studio
   - board: nice_nano//zmk
     shield: settings_reset
   - board: nice_nano//zmk
